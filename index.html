@@ -54,6 +54,16 @@
 
   html { scroll-behavior: smooth; }
   body { background-color: var(--dark-green); font-family: 'Manrope', sans-serif; overflow-x: hidden; }
+  /* `clip` stops sideways overflow without turning body into a scroll container (which makes fixed elements misbehave on iOS Safari) */
+  @supports (overflow: clip) { body { overflow-x: clip; } }
+
+  /* Sticky header: always above every section; own compositing layer so it can't be repainted underneath */
+  .site-header {
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
 
   ::selection {
     background-color: var(--light-green);
@@ -307,8 +317,8 @@
 <body class="bg-forest text-white antialiased">
 
 <!-- ===================== HEADER ===================== -->
-<header class="fixed inset-x-0 top-0 z-50">
-  <div class="absolute inset-0 bg-gradient-to-b from-forest/95 via-forest/85 to-forest/70 pointer-events-none"></div>
+<header id="siteHeader" class="site-header fixed inset-x-0 top-0 z-[9999]">
+  <div class="absolute inset-0 bg-forest shadow-[0_8px_24px_-12px_rgba(0,0,0,0.5)] xl:bg-transparent xl:bg-gradient-to-b xl:from-forest/95 xl:via-forest/85 xl:to-forest/70 xl:shadow-none pointer-events-none"></div>
 
   <div class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-10">
     <a href="#home" class="flex items-center shrink-0">
@@ -1182,7 +1192,7 @@
 </section>
 
 <!-- ===================== FINAL CTA ===================== -->
-<section id="contact-cta" class="bg-forest py-20 sm:py-28">
+<section id="contact-cta" class="overflow-hidden bg-forest py-20 sm:py-28">
   <div class="mx-auto max-w-[88rem] px-6 sm:px-8 lg:px-12">
     <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
 
