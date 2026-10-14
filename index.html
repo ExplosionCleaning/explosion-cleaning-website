@@ -86,6 +86,8 @@
   .reveal-4 { animation-delay: 0.38s; }
   .reveal-5 { animation-delay: 0.49s; }
   .reveal-6 { animation-delay: 0.3s; }
+  .reveal-7 { animation-delay: 0.6s; }
+  .reveal-8 { animation-delay: 0.7s; }
 
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
@@ -147,7 +149,7 @@
     width: max-content;
     animation: marquee 50s linear infinite;
   }
-  .reviews-marquee:hover .reviews-track { animation-play-state: paused; }
+  .reviews-track { pointer-events: none; } /* continuous scroll: no hover/click/focus interaction */
 
   @media (prefers-reduced-motion: reduce) {
     .reviews-track { animation: none; flex-wrap: wrap; width: 100%; }
@@ -377,17 +379,21 @@
         <span class="text-[11px] font-bold uppercase tracking-[0.18em] text-sage-bright">Serving San Diego County</span>
       </div>
 
-      <p class="reveal reveal-2 font-script text-sage-bright text-5xl sm:text-6xl leading-none mt-6">We Don't Just Clean</p>
+      <p class="reveal reveal-2 font-script text-sage-bright text-[2rem] max-sm:whitespace-nowrap sm:text-6xl leading-none mt-6">We Don't Just Clean</p>
 
-      <h1 class="reveal reveal-3 mt-3 font-serif font-black leading-[1.05] tracking-tight text-white text-5xl sm:text-6xl lg:text-[4.25rem]">
+      <p class="reveal reveal-3 mt-3 font-serif font-black leading-[1.05] tracking-tight text-white text-5xl sm:text-6xl lg:text-[4.25rem]">
         We Make It <span class="text-sage-bright">Shine!</span>
+      </p>
+
+      <h1 class="reveal reveal-4 mt-5 text-balance font-serif text-xl font-bold leading-snug text-white sm:text-2xl lg:text-[1.7rem]">
+        Professional Cleaning Services in <span class="text-sage-bright">San Diego</span>
       </h1>
 
-      <p class="reveal reveal-4 mt-5 max-w-lg max-md:mx-auto text-base sm:text-lg leading-relaxed text-gray-100">
+      <p class="reveal reveal-5 mt-4 max-w-lg max-md:mx-auto text-base sm:text-lg leading-relaxed text-gray-100">
         Professional residential &amp; commercial cleaning services you can trust. Licensed, bonded &amp; insured with years of experience making homes and businesses sparkle.
       </p>
 
-      <div class="reveal reveal-5 mt-8 flex flex-wrap items-center gap-4 max-md:mx-auto max-md:max-w-xs max-md:flex-col max-md:items-stretch">
+      <div class="reveal reveal-7 mt-8 flex flex-wrap items-center gap-4 max-md:mx-auto max-md:max-w-xs max-md:flex-col max-md:items-stretch">
         <a
           href="#estimate"
           class="inline-flex items-center max-md:justify-center gap-2 rounded-full bg-sage px-7 py-3.5 text-sm font-bold text-forest shadow-[0_10px_30px_-8px_rgba(164,184,144,0.55)] transition hover:bg-sage-bright hover:-translate-y-0.5 active:scale-[0.98]"
@@ -404,7 +410,7 @@
         </a>
       </div>
 
-      <div class="reveal reveal-6 mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 max-md:justify-center">
+      <div class="reveal reveal-8 mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 max-md:justify-center">
         <div class="flex items-center gap-2 text-sm font-semibold text-gray-200">
           <i class="ph-fill ph-shield-check text-lg text-sage-bright"></i>
           Licensed
@@ -477,12 +483,13 @@
 <section id="services" class="bg-white py-20 sm:py-28">
   <div class="mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
 
-    <div class="reveal-scroll mx-auto max-w-3xl text-center">
+    <div class="reveal-scroll mx-auto max-w-6xl text-center">
       <p class="font-script text-leaf text-4xl sm:text-5xl leading-none">What We Offer</p>
-      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
-        Professional Cleaning Services in <span class="text-leaf">San Diego, CA</span>
+      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl xl:text-6xl leading-tight tracking-tight text-forest">
+        <span class="block lg:whitespace-nowrap">Professional Cleaning Services</span>
+        <span class="block text-leaf lg:whitespace-nowrap">in San Diego, CA</span>
       </h2>
-      <p class="mt-5 text-base sm:text-lg leading-relaxed text-gray-600">
+      <p class="mx-auto mt-5 max-w-3xl text-base sm:text-lg leading-relaxed text-gray-600">
         From routine upkeep to move-out deep cleans, our trained team delivers spotless, reliable results for homes and businesses across San Diego County.
       </p>
     </div>
@@ -949,7 +956,7 @@
     <div class="reviews-track items-stretch">
       <div class="flex shrink-0 items-stretch gap-6 pr-6 sm:gap-8 sm:pr-8">
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -967,7 +974,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -985,7 +992,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1003,7 +1010,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1021,7 +1028,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1039,7 +1046,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1061,7 +1068,7 @@
 
       <div class="flex shrink-0 items-stretch gap-6 pr-6 sm:gap-8 sm:pr-8" aria-hidden="true">
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1079,7 +1086,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1097,7 +1104,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1115,7 +1122,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1133,7 +1140,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1151,7 +1158,7 @@
           </div>
         </div>
 
-        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+        <div tabindex="-1" class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 focus:outline-none shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
           <div class="flex gap-1">
             <i class="ph-fill ph-star text-sm text-leaf"></i>
             <i class="ph-fill ph-star text-sm text-leaf"></i>
@@ -1686,7 +1693,19 @@
 <!-- ===================== SERVICE AREA ===================== -->
 <section id="areas" class="relative overflow-hidden bg-[#F5F0E8] py-20 sm:py-28">
   <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-    <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-16">
+    <div class="reveal-scroll mx-auto max-w-4xl text-center">
+      <p class="font-script text-leaf text-4xl sm:text-5xl leading-none">Where We Work</p>
+      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
+        Proudly Serving<br>
+        <span class="text-leaf">San Diego County</span>
+      </h2>
+      <p class="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
+        We proudly serve every corner of the county,<br class="hidden sm:inline">
+        treating each home and business with pride.
+      </p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 items-center gap-14 sm:mt-16 lg:grid-cols-2 lg:gap-16">
 
       <!-- Left: map -->
       <div class="reveal-scroll relative">
@@ -1703,20 +1722,9 @@
         </div>
       </div>
 
-      <!-- Right: text + city list -->
+      <!-- Right: city list -->
       <div class="reveal-scroll [animation-delay:120ms] flex flex-col justify-center self-stretch">
-        <p class="font-script text-leaf text-4xl sm:text-5xl leading-none">Where We Work</p>
-
-        <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
-          Proudly Serving <span class="text-leaf">San Diego County</span>
-        </h2>
-
-        <p class="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
-          We proudly serve every corner of the county,<br>
-          treating each home and business with pride.
-        </p>
-
-        <div class="mt-8 grid grid-cols-2 gap-x-6 gap-y-4">
+        <div class="grid grid-cols-2 gap-x-6 gap-y-4">
           <div class="flex items-center gap-3">
             <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-sm"><i class="ph-fill ph-map-pin text-base text-leaf"></i></span>
             <span class="text-sm font-semibold text-forest sm:text-base">San Diego</span>
