@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explosion Cleaning Service | Premium Cleaning in San Diego County</title>
+<meta name="description" content="Professional residential & commercial cleaning services in San Diego County. Licensed, bonded & insured. Get your free estimate today.">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2c4532">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: '#2c4532',
+          leaf: {
+            DEFAULT: '#556447',
+            light: '#667b55',
+          },
+          sage: {
+            DEFAULT: '#A4B890',
+            bright: '#C2D2B2',
+          },
+          cream: '#FFEECB',
+        },
+        fontFamily: {
+          sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          serif: ['"Playfair Display"', 'ui-serif', 'serif'],
+          script: ['"Alex Brush"', 'cursive'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root {
+    --dark-green: #2c4532;
+    --light-green: #556447;
+    --sage: #A4B890;
+    --cream: #FFEECB;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background-color: var(--dark-green); font-family: 'Manrope', sans-serif; overflow-x: hidden; }
+
+  ::selection {
+    background-color: var(--light-green);
+    color: #ffffff;
+  }
+  ::-moz-selection {
+    background-color: var(--light-green);
+    color: #ffffff;
+  }
+
+  .nav-link {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: color 0.25s ease;
+  }
+  .nav-link:hover { color: var(--sage); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .reveal-1 { animation-delay: 0.05s; }
+  .reveal-2 { animation-delay: 0.16s; }
+  .reveal-3 { animation-delay: 0.27s; }
+  .reveal-4 { animation-delay: 0.38s; }
+  .reveal-5 { animation-delay: 0.49s; }
+  .reveal-6 { animation-delay: 0.3s; }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; transform: none; }
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 34s linear infinite;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; flex-wrap: wrap; width: 100%; }
+    .marquee-track [aria-hidden="true"] { display: none; }
+  }
+
+  /* Reveal-on-scroll: the animation only supplies the "from" state (backwards fill), so once it
+     finishes it no longer holds opacity/transform and hover transforms on the element still work. */
+  .reveal-scroll:not(.in-view) {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .reveal-scroll.in-view {
+    animation: revealIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  @keyframes revealIn {
+    from { opacity: 0; transform: translateY(24px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-scroll:not(.in-view) { opacity: 1; transform: none; }
+    .reveal-scroll.in-view { animation: none; }
+  }
+
+  /* Services cards: hover uses transform + box-shadow + border-color only (border width never changes). */
+  .svc-card {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
+  }
+  .svc-card:hover {
+    transform: translate3d(0, -6px, 0);
+    border-color: rgba(85, 100, 71, 0.7);
+    box-shadow: 0 20px 45px -12px rgba(44, 69, 50, 0.35);
+  }
+
+  .reviews-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 50s linear infinite;
+  }
+  .reviews-marquee:hover .reviews-track { animation-play-state: paused; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reviews-track { animation: none; flex-wrap: wrap; width: 100%; }
+    .reviews-track [aria-hidden="true"] { display: none; }
+  }
+
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--dark-green);
+  }
+
+  .form-input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.925rem;
+    font-family: 'Manrope', sans-serif;
+    color: var(--dark-green);
+    background-color: #ffffff;
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: var(--light-green);
+    box-shadow: 0 0 0 3px rgba(85, 100, 71, 0.22);
+  }
+
+  .stepper-btn {
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: var(--dark-green);
+    background-color: #ffffff;
+    transition: border-color 0.2s ease-out, color 0.2s ease-out;
+  }
+  .stepper-btn:hover {
+    border-color: var(--light-green);
+    color: var(--light-green);
+  }
+
+  .stepper-value {
+    width: 100%;
+    max-width: 3.5rem;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-green);
+  }
+  .stepper-value:focus { outline: none; }
+
+  .checkbox-item {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--dark-green);
+  }
+
+  input[type="checkbox"] {
+    height: 1.15rem;
+    width: 1.15rem;
+    cursor: pointer;
+    accent-color: var(--light-green);
+  }
+
+  input[type="range"].green-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, var(--light-green) 0%, var(--light-green) var(--range-progress, 50%), #e5e5e5 var(--range-progress, 50%), #e5e5e5 100%);
+    outline: none;
+    cursor: pointer;
+  }
+  input[type="range"].green-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 22px;
+    width: 22px;
+    border-radius: 9999px;
+    background-color: var(--light-green);
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  input[type="range"].green-range::-moz-range-thumb {
+    height: 22px;
+    width: 22px;
+    border-radius: 9999px;
+    background-color: var(--light-green);
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+  }
+  .faq-panel.open { grid-template-rows: 1fr; }
+  .faq-panel > div { overflow: hidden; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-panel { transition: none; }
+  }
+
+
+  .hero-overlay { background: rgba(44, 69, 50, 0.7); }
+
+  .scroll-top-btn {
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .scroll-top-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .contact-popup {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
+  }
+  .contact-popup.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  .contact-popup > div { overflow: hidden; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-top-btn { transition: none; }
+    .contact-popup { transition: none; }
+  }
+</style>
+</head>
+
+<body class="bg-forest text-white antialiased">
+
+<!-- ===================== HEADER ===================== -->
+<header class="fixed inset-x-0 top-0 z-50">
+  <div class="absolute inset-0 bg-gradient-to-b from-forest/95 via-forest/85 to-forest/70 pointer-events-none"></div>
+
+  <div class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-10">
+    <a href="#home" class="flex items-center shrink-0">
+      <img
+        src="Media/Explosion%20Cleaning%20Service%20Logo.png"
+        alt="Explosion Cleaning Service"
+        class="h-16 sm:h-20 lg:h-24 w-auto"
+      >
+    </a>
+
+    <nav class="hidden xl:flex items-center gap-8">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Our Services</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#why-us" class="nav-link">Why Us</a>
+      <a href="#areas" class="nav-link">Service Areas</a>
+      <a href="#reviews" class="nav-link">Our Reviews</a>
+      <a href="#faq" class="nav-link">FAQs</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href="tel:+16192406951"
+        class="inline-flex items-center gap-2 rounded-full bg-sage px-4 sm:px-5 py-2.5 text-sm font-bold text-forest transition hover:bg-sage-bright active:scale-[0.98]"
+      >
+        <i class="ph-fill ph-phone text-base"></i>
+        <span class="hidden sm:inline">(619) 240-6951</span>
+      </a>
+
+      <button
+        id="menuBtn"
+        class="xl:hidden inline-flex items-center justify-center text-2xl text-white"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <i class="ph-bold ph-list"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden xl:hidden relative border-t border-white/10 bg-forest/95 backdrop-blur-md px-6 py-4">
+    <a href="#home" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Home</a>
+    <a href="#services" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Our Services</a>
+    <a href="#pricing" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Pricing</a>
+    <a href="#why-us" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Why Us</a>
+    <a href="#areas" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Service Areas</a>
+    <a href="#reviews" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Our Reviews</a>
+    <a href="#faq" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white hover:text-sage">FAQs</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="relative min-h-[100dvh] w-full overflow-hidden">
+  <img
+    src="Media/Explosion%20Cleaning%20Service%20-%201920x1080.jpg"
+    alt="Sparkling clean, professionally cleaned modern kitchen"
+    class="absolute inset-0 h-full w-full object-cover"
+  >
+  <div class="hero-overlay absolute inset-0"></div>
+
+  <div class="relative z-10 mx-auto grid min-h-[100dvh] max-w-7xl grid-cols-1 items-center gap-14 px-6 pt-28 pb-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-12 lg:pt-24">
+
+    <!-- Left: copy + CTAs -->
+    <div class="max-w-xl max-md:mx-auto max-md:text-center">
+      <div class="reveal reveal-1 inline-flex items-center gap-2 rounded-full border border-sage/50 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
+        <i class="ph-fill ph-star text-[13px] text-sage-bright"></i>
+        <span class="text-[11px] font-bold uppercase tracking-[0.18em] text-sage-bright">Serving San Diego County</span>
+      </div>
+
+      <p class="reveal reveal-2 font-script text-sage-bright text-5xl sm:text-6xl leading-none mt-6">We Don't Just Clean</p>
+
+      <h1 class="reveal reveal-3 mt-3 font-serif font-black leading-[1.05] tracking-tight text-white text-5xl sm:text-6xl lg:text-[4.25rem]">
+        We Make It <span class="text-sage-bright">Shine!</span>
+      </h1>
+
+      <p class="reveal reveal-4 mt-5 max-w-lg max-md:mx-auto text-base sm:text-lg leading-relaxed text-gray-100">
+        Professional residential &amp; commercial cleaning services you can trust. Licensed, bonded &amp; insured with years of experience making homes and businesses sparkle.
+      </p>
+
+      <div class="reveal reveal-5 mt-8 flex flex-wrap items-center gap-4 max-md:mx-auto max-md:max-w-xs max-md:flex-col max-md:items-stretch">
+        <a
+          href="#estimate"
+          class="inline-flex items-center max-md:justify-center gap-2 rounded-full bg-sage px-7 py-3.5 text-sm font-bold text-forest shadow-[0_10px_30px_-8px_rgba(164,184,144,0.55)] transition hover:bg-sage-bright hover:-translate-y-0.5 active:scale-[0.98]"
+        >
+          <i class="ph-fill ph-calendar-check text-base"></i>
+          Get Free Estimate
+        </a>
+        <a
+          href="#services"
+          class="inline-flex items-center max-md:justify-center gap-2 rounded-full border border-white/40 px-7 py-3.5 text-sm font-bold text-white transition hover:border-white hover:bg-white/10 hover:-translate-y-0.5 active:scale-[0.98]"
+        >
+          Our Services
+          <i class="ph-bold ph-arrow-right text-base"></i>
+        </a>
+      </div>
+
+      <div class="reveal reveal-6 mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 max-md:justify-center">
+        <div class="flex items-center gap-2 text-sm font-semibold text-gray-200">
+          <i class="ph-fill ph-shield-check text-lg text-sage-bright"></i>
+          Licensed
+        </div>
+        <div class="flex items-center gap-2 text-sm font-semibold text-gray-200">
+          <i class="ph-fill ph-seal-check text-lg text-sage-bright"></i>
+          Trustworthy
+        </div>
+        <div class="flex items-center gap-2 text-sm font-semibold text-gray-200">
+          <i class="ph-fill ph-check-circle text-lg text-sage-bright"></i>
+          Insured
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: portrait image -->
+    <div class="reveal reveal-4 relative mx-auto w-full max-w-sm lg:max-w-none">
+      <div class="absolute -inset-10 rounded-[2.5rem] bg-sage/20 blur-3xl"></div>
+      <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.7)]">
+        <img
+          src="Media/Explosion%20Cleaning%20Services%20(5).jpg"
+          alt="Explosion Cleaning Service team member with branded cleaning equipment"
+          class="aspect-[1024/1538] w-full object-cover"
+        >
+        <div class="absolute bottom-4 left-4 rounded-xl bg-forest px-4 py-2.5 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.5)] sm:bottom-5 sm:left-5 sm:px-5 sm:py-3">
+          <p class="font-serif text-lg font-bold text-white sm:text-xl">Dulce Beltran</p>
+          <p class="mt-0.5 text-[11px] font-bold uppercase tracking-[0.2em] text-sage-bright sm:text-xs">CEO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES MARQUEE ===================== -->
+<section class="marquee-section relative overflow-hidden bg-forest py-6 sm:py-7">
+  <h2 class="sr-only">Our Services</h2>
+  <div class="marquee-track">
+    <div class="flex shrink-0 items-center gap-8 sm:gap-12 pr-8 sm:pr-12">
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Regular Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Deep Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Move In/Out Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Airbnb Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Post Construction</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Commercial Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+    </div>
+    <div class="flex shrink-0 items-center gap-8 sm:gap-12 pr-8 sm:pr-12" aria-hidden="true">
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Regular Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Deep Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Move In/Out Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Airbnb Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Post Construction</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+      <span class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.12em] text-white">Commercial Cleaning</span>
+      <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-sage"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="bg-white py-20 sm:py-28">
+  <div class="mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
+
+    <div class="reveal-scroll mx-auto max-w-3xl text-center">
+      <p class="font-script text-leaf text-4xl sm:text-5xl leading-none">What We Offer</p>
+      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
+        Professional Cleaning Services in <span class="text-leaf">San Diego, CA</span>
+      </h2>
+      <p class="mt-5 text-base sm:text-lg leading-relaxed text-gray-600">
+        From routine upkeep to move-out deep cleans, our trained team delivers spotless, reliable results for homes and businesses across San Diego County.
+      </p>
+    </div>
+
+    <div class="mt-14 grid auto-rows-fr grid-cols-1 gap-8 sm:mt-16 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 lg:gap-8">
+
+      <div class="reveal-scroll group flex flex-col overflow-hidden rounded-2xl border border-leaf/25 bg-white shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] svc-card">
+        <div class="aspect-[3/2] w-full overflow-hidden">
+          <img
+            src="Media/Explosion%20Cleaning%20Service%20-%20regular%20cleaning%201920x1080.jpg"
+            alt="Regular cleaning service in a bright San Diego kitchen"
+            class="h-full w-full object-cover"
+          >
+        </div>
+        <div class="flex flex-1 flex-col px-7 pb-8 sm:px-8">
+          <div class="relative -mt-7 mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-leaf shadow-[0_8px_20px_-6px_rgba(44,69,50,0.35)] ring-4 ring-white">
+            <i class="ph-fill ph-sparkle text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest sm:text-2xl lg:text-xl xl:text-2xl">Regular Cleaning</h3>
+          <p class="mt-3 flex-1 text-[15px] leading-relaxed text-gray-600">Consistent upkeep to keep your home fresh and spotless.</p>
+          <p class="mt-5 text-[13px] text-leaf max-xl:min-h-[2.5rem]"><span class="font-bold">Best For:</span> <span class="font-semibold">Busy families &amp; professionals</span></p>
+          <ul class="mt-4 space-y-2 border-t border-forest/10 pt-4">
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Weekly/Bi-weekly</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Pet-safe products</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Same team every time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal-scroll group flex flex-col overflow-hidden rounded-2xl border border-leaf/25 bg-white shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] svc-card [animation-delay:80ms]">
+        <div class="aspect-[3/2] w-full overflow-hidden">
+          <img
+            src="Media/Explosion%20Cleaning%20Service%20-%20deep%20cleaning%201920x1080.jpg"
+            alt="Deep cleaning service reaching every detail of a home"
+            class="h-full w-full object-cover"
+          >
+        </div>
+        <div class="flex flex-1 flex-col px-7 pb-8 sm:px-8">
+          <div class="relative -mt-7 mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-leaf shadow-[0_8px_20px_-6px_rgba(44,69,50,0.35)] ring-4 ring-white">
+            <i class="ph-fill ph-spray-bottle text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest sm:text-2xl lg:text-xl xl:text-2xl">Deep Cleaning</h3>
+          <p class="mt-3 flex-1 text-[15px] leading-relaxed text-gray-600">An intensive top-to-bottom clean for homes that need extra care.</p>
+          <p class="mt-5 text-[13px] text-leaf max-xl:min-h-[2.5rem]"><span class="font-bold">Best For:</span> <span class="font-semibold">First-time clients &amp; spring cleaning</span></p>
+          <ul class="mt-4 space-y-2 border-t border-forest/10 pt-4">
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Baseboards &amp; vents</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Inside appliances</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>25-50% more thorough</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal-scroll group flex flex-col overflow-hidden rounded-2xl border border-leaf/25 bg-white shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] svc-card [animation-delay:160ms]">
+        <div class="aspect-[3/2] w-full overflow-hidden">
+          <img
+            src="Media/Explosion%20Cleaning%20Service%20-%20move%20cleaning%201920x1080.jpg"
+            alt="Move in and move out cleaning service"
+            class="h-full w-full object-cover"
+          >
+        </div>
+        <div class="flex flex-1 flex-col px-7 pb-8 sm:px-8">
+          <div class="relative -mt-7 mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-leaf shadow-[0_8px_20px_-6px_rgba(44,69,50,0.35)] ring-4 ring-white">
+            <i class="ph-fill ph-package text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest sm:text-2xl lg:text-xl xl:text-2xl">Move In / Out Cleaning</h3>
+          <p class="mt-3 flex-1 text-[15px] leading-relaxed text-gray-600">A complete empty-home detail before or after your move.</p>
+          <p class="mt-5 text-[13px] text-leaf max-xl:min-h-[2.5rem]"><span class="font-bold">Best For:</span> <span class="font-semibold">Homeowners &amp; renters</span></p>
+          <ul class="mt-4 space-y-2 border-t border-forest/10 pt-4">
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Inside cabinets</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Inside fridge/oven</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Deposit-back ready</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal-scroll group flex flex-col overflow-hidden rounded-2xl border border-leaf/25 bg-white shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] svc-card">
+        <div class="aspect-[3/2] w-full overflow-hidden">
+          <img
+            src="Media/Explosion%20Cleaning%20Service%20-%20airbnb%20cleaning%201920x1080.jpg"
+            alt="Airbnb turnover cleaning service"
+            class="h-full w-full object-cover"
+          >
+        </div>
+        <div class="flex flex-1 flex-col px-7 pb-8 sm:px-8">
+          <div class="relative -mt-7 mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-leaf shadow-[0_8px_20px_-6px_rgba(44,69,50,0.35)] ring-4 ring-white">
+            <i class="ph-fill ph-house-line text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest sm:text-2xl lg:text-xl xl:text-2xl">Airbnb Cleaning</h3>
+          <p class="mt-3 flex-1 text-[15px] leading-relaxed text-gray-600">Fast, reliable turnovers to keep your guests happy and your reviews high.</p>
+          <p class="mt-5 text-[13px] text-leaf max-xl:min-h-[2.5rem]"><span class="font-bold">Best For:</span> <span class="font-semibold">Airbnb &amp; VRBO hosts</span></p>
+          <ul class="mt-4 space-y-2 border-t border-forest/10 pt-4">
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Same-day turnovers</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Fresh linens</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Restock supplies</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal-scroll group flex flex-col overflow-hidden rounded-2xl border border-leaf/25 bg-white shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] svc-card [animation-delay:80ms]">
+        <div class="aspect-[3/2] w-full overflow-hidden">
+          <img
+            src="Media/Explosion%20Cleaning%20Service%20-%20post%20construction%20cleaning%201920x1080.jpg"
+            alt="Post construction cleaning removing dust and debris"
+            class="h-full w-full object-cover"
+          >
+        </div>
+        <div class="flex flex-1 flex-col px-7 pb-8 sm:px-8">
+          <div class="relative -mt-7 mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-leaf shadow-[0_8px_20px_-6px_rgba(44,69,50,0.35)] ring-4 ring-white">
+            <i class="ph-fill ph-hard-hat text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest sm:text-2xl lg:text-xl xl:text-2xl">Post Construction</h3>
+          <p class="mt-3 flex-1 text-[15px] leading-relaxed text-gray-600">Dust-free, debris-free cleanup after a renovation or build.</p>
+          <p class="mt-5 text-[13px] text-leaf max-xl:min-h-[2.5rem]"><span class="font-bold">Best For:</span> <span class="font-semibold">Contractors &amp; new homeowners</span></p>
+          <ul class="mt-4 space-y-2 border-t border-forest/10 pt-4">
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Fine dust removal</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Paint &amp; debris cleanup</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Final walkthrough ready</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal-scroll group flex flex-col overflow-hidden rounded-2xl border border-leaf/25 bg-white shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] svc-card [animation-delay:160ms]">
+        <div class="aspect-[3/2] w-full overflow-hidden">
+          <img
+            src="Media/Explosion%20Cleaning%20Service%20-%20office%20cleaning%201920x1080.jpg"
+            alt="Commercial office cleaning service"
+            class="h-full w-full object-cover"
+          >
+        </div>
+        <div class="flex flex-1 flex-col px-7 pb-8 sm:px-8">
+          <div class="relative -mt-7 mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-leaf shadow-[0_8px_20px_-6px_rgba(44,69,50,0.35)] ring-4 ring-white">
+            <i class="ph-fill ph-buildings text-2xl"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-forest sm:text-2xl lg:text-xl xl:text-2xl">Commercial Cleaning</h3>
+          <p class="mt-3 flex-1 text-[15px] leading-relaxed text-gray-600">Professional cleaning for offices, retail, and commercial spaces.</p>
+          <p class="mt-5 text-[13px] text-leaf max-xl:min-h-[2.5rem]"><span class="font-bold">Best For:</span> <span class="font-semibold">Offices &amp; retail spaces</span></p>
+          <ul class="mt-4 space-y-2 border-t border-forest/10 pt-4">
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>After-hours service</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Custom schedules</li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i>Fully insured team</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section id="pricing" class="relative overflow-hidden bg-[#F5F0E8] py-20 sm:py-28">
+  <div class="mx-auto max-w-[92rem] px-6 sm:px-8 lg:px-12">
+
+    <div class="reveal-scroll mx-auto max-w-4xl text-center">
+      <p class="font-script text-leaf text-4xl sm:text-5xl leading-none">Our Rates</p>
+      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
+        Transparent Pricing,<br>
+        <span class="text-leaf">Exceptional Results</span>
+      </h2>
+      <p class="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg lg:whitespace-nowrap">
+        Choose a flat-rate package or pay by the hour. No hidden fees, no surprises when the invoice arrives.
+      </p>
+    </div>
+
+    <div class="reveal-scroll mt-10 flex flex-wrap items-center justify-center gap-4" role="tablist" aria-label="Pricing options">
+      <button
+        type="button"
+        class="pricing-tab-btn rounded-full bg-leaf px-6 py-2.5 text-sm font-bold text-white shadow-[0_10px_25px_-8px_rgba(44,69,50,0.6)] transition duration-200 ease-out delay-0"
+        data-tab="flat"
+        role="tab"
+        aria-selected="true"
+        aria-controls="pricing-panel-flat"
+        id="pricing-tab-flat"
+      >
+        Flat Rates
+      </button>
+      <button
+        type="button"
+        class="pricing-tab-btn rounded-full border border-forest/15 bg-white px-6 py-2.5 text-sm font-bold text-gray-500 transition duration-200 ease-out delay-0 hover:text-forest"
+        data-tab="addons"
+        role="tab"
+        aria-selected="false"
+        aria-controls="pricing-panel-addons"
+        id="pricing-tab-addons"
+      >
+        Add-Ons &amp; Hourly
+      </button>
+    </div>
+
+    <!-- Flat Rates panel -->
+    <div id="pricing-panel-flat" role="tabpanel" aria-labelledby="pricing-tab-flat" class="mt-14 grid grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-3 lg:gap-8">
+
+      <div class="reveal-scroll flex min-h-[580px] flex-col rounded-2xl border border-forest/10 bg-white px-6 py-10 sm:px-8 sm:py-12 shadow-[0_2px_20px_-4px_rgba(44,69,50,0.12)]">
+        <h3 class="font-serif text-2xl font-bold text-forest">Regular Cleaning</h3>
+        <p class="mt-3 flex items-baseline gap-2">
+          <span class="text-sm text-gray-500">Starting at</span>
+          <span class="font-serif text-3xl font-black text-leaf">$150</span>
+        </p>
+        <p class="mt-2 text-sm text-gray-500">Recurring upkeep for a consistently spotless home.</p>
+        <hr class="my-7 border-forest/10">
+        <div class="space-y-4 text-sm">
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Small Space:</span>
+            <span class="whitespace-nowrap text-gray-500">$150 - $200</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Medium Space:</span>
+            <span class="whitespace-nowrap text-gray-500">$200 - $300</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Large Space:</span>
+            <span class="whitespace-nowrap text-gray-500">$300 - $400</span>
+          </div>
+        </div>
+        <a
+          href="#estimate"
+          class="mt-auto inline-flex w-full items-center justify-center rounded-full bg-leaf px-6 py-3.5 text-sm font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest"
+        >
+          Book Now
+        </a>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:80ms] relative flex min-h-[580px] flex-col rounded-2xl border-2 border-leaf bg-white px-6 py-10 sm:px-8 sm:py-12 shadow-[0_20px_45px_-12px_rgba(44,69,50,0.4)] lg:-translate-y-3">
+        <span class="absolute -top-3 right-6 rounded-full bg-leaf px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">Most Popular</span>
+        <h3 class="font-serif text-2xl font-bold text-forest">Deep Cleaning</h3>
+        <p class="mt-3 flex items-baseline gap-2">
+          <span class="text-sm text-gray-500">Starting at</span>
+          <span class="font-serif text-3xl font-black text-leaf">$249</span>
+        </p>
+        <p class="mt-2 text-sm text-gray-500">25-50% more intensive than standard cleaning.</p>
+        <hr class="my-7 border-forest/10">
+        <div class="space-y-4 text-sm">
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Small Space:</span>
+            <span class="whitespace-nowrap text-gray-500">$300 - $375</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Medium Space:</span>
+            <span class="whitespace-nowrap text-gray-500">$375 - $400</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Large Space:</span>
+            <span class="whitespace-nowrap text-gray-500">$400 - $800+</span>
+          </div>
+        </div>
+        <a
+          href="#estimate"
+          class="mt-auto inline-flex w-full items-center justify-center rounded-full bg-leaf px-6 py-3.5 text-sm font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest"
+        >
+          Book Now
+        </a>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:160ms] flex min-h-[580px] flex-col rounded-2xl border border-forest/10 bg-white px-6 py-10 sm:px-8 sm:py-12 shadow-[0_2px_20px_-4px_rgba(44,69,50,0.12)]">
+        <h3 class="font-serif text-2xl font-bold text-forest">Move-In / Move-Out</h3>
+        <p class="mt-3 flex items-baseline gap-2">
+          <span class="text-sm text-gray-500">Starting at</span>
+          <span class="font-serif text-3xl font-black text-leaf">$299</span>
+        </p>
+        <p class="mt-2 text-sm text-gray-500">Complete empty-home detail before or after your move.</p>
+        <hr class="my-7 border-forest/10">
+        <div class="space-y-4 text-sm">
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Apartment:</span>
+            <span class="whitespace-nowrap text-gray-500">$200 - $300</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">2-3 Bedrooms:</span>
+            <span class="whitespace-nowrap text-gray-500">$350 - $450</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">4+ Bedrooms:</span>
+            <span class="whitespace-nowrap text-gray-500">$450+</span>
+          </div>
+        </div>
+        <a
+          href="#estimate"
+          class="mt-auto inline-flex w-full items-center justify-center rounded-full bg-leaf px-6 py-3.5 text-sm font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest"
+        >
+          Book Now
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Add-Ons & Hourly panel -->
+    <div id="pricing-panel-addons" role="tabpanel" aria-labelledby="pricing-tab-addons" class="mt-14 hidden grid grid-cols-1 items-stretch gap-8 sm:mt-16 lg:grid-cols-3 lg:gap-8">
+
+      <div class="reveal-scroll flex min-h-[420px] flex-col rounded-2xl border border-forest/10 bg-white p-8 sm:p-10 shadow-[0_2px_20px_-4px_rgba(44,69,50,0.12)]">
+        <h3 class="font-serif text-2xl font-bold text-forest">Add-On Services</h3>
+        <hr class="my-7 border-forest/10">
+        <div class="space-y-4 text-sm">
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Oven Cleaning:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$40</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Microwave Cleaning:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$30</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Fridge Cleaning:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$60 - $80</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Garage Cleaning:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$100</span>
+          </div>
+        </div>
+        <a
+          href="#estimate"
+          class="mt-auto inline-flex w-full items-center justify-center rounded-full bg-leaf px-6 py-3.5 text-sm font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest"
+        >
+          Book Now
+        </a>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:80ms] flex min-h-[420px] flex-col rounded-2xl border border-forest/10 bg-white p-8 sm:p-10 shadow-[0_2px_20px_-4px_rgba(44,69,50,0.12)]">
+        <h3 class="font-serif text-2xl font-bold text-forest">Hourly Rates</h3>
+        <hr class="my-7 border-forest/10">
+        <div class="space-y-4 text-sm">
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Standard Hourly:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$50/hr</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Deep Clean Hourly:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$75/hr</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Commercial Hourly:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$60/hr</span>
+          </div>
+        </div>
+        <a
+          href="#estimate"
+          class="mt-auto inline-flex w-full items-center justify-center rounded-full bg-leaf px-6 py-3.5 text-sm font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest"
+        >
+          Book Now
+        </a>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:160ms] flex min-h-[420px] flex-col rounded-2xl border border-forest/10 bg-white p-8 sm:p-10 shadow-[0_2px_20px_-4px_rgba(44,69,50,0.12)]">
+        <h3 class="font-serif text-2xl font-bold text-forest">Specialty Services</h3>
+        <hr class="my-7 border-forest/10">
+        <div class="space-y-4 text-sm">
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Inside Windows:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$50</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Inside Cabinets:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$60</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Baseboards &amp; Trim:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$45</span>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <span class="whitespace-nowrap font-semibold text-forest">Pet Hair Removal:</span>
+            <span class="whitespace-nowrap font-bold text-leaf">$40</span>
+          </div>
+        </div>
+        <a
+          href="#estimate"
+          class="mt-auto inline-flex w-full items-center justify-center rounded-full bg-leaf px-6 py-3.5 text-sm font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest"
+        >
+          Book Now
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section id="why-us" class="bg-forest pb-20 pt-24 sm:pb-28 sm:pt-32">
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+    <div class="reveal-scroll mx-auto max-w-3xl text-center">
+      <p class="font-script text-sage text-4xl sm:text-5xl leading-none">Why Choose Us</p>
+      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-white">
+        Why San Diego Trusts <span class="text-sage">Explosion Cleaning</span>
+      </h2>
+      <p class="mt-5 text-base sm:text-lg leading-relaxed text-gray-400">
+        We back every clean with real credentials, real people, and a guarantee<br>
+        that actually means something.
+      </p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-8 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+
+      <div class="reveal-scroll rounded-2xl border border-white/10 bg-[#35513d] p-8 transition duration-200 ease-out delay-0 hover:-translate-y-1.5 hover:border-sage/60 hover:shadow-[0_20px_45px_-15px_rgba(164,184,144,0.35)]">
+        <div class="flex h-14 w-14 items-center justify-center rounded-full border border-sage/20 bg-sage/10">
+          <i class="ph-fill ph-shield-check text-2xl text-sage"></i>
+        </div>
+        <h3 class="mt-6 font-serif text-xl font-bold text-white">Licensed &amp; Insured</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-400">Fully licensed, bonded, and insured for your peace of mind.</p>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:80ms] rounded-2xl border border-white/10 bg-[#35513d] p-8 transition duration-200 ease-out delay-0 hover:-translate-y-1.5 hover:border-sage/60 hover:shadow-[0_20px_45px_-15px_rgba(164,184,144,0.35)]">
+        <div class="flex h-14 w-14 items-center justify-center rounded-full border border-sage/20 bg-sage/10">
+          <i class="ph-fill ph-users text-2xl text-sage"></i>
+        </div>
+        <h3 class="mt-6 font-serif text-xl font-bold text-white">Trustworthy Team</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-400">Vetted, background-checked professionals you can trust in your home.</p>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:160ms] rounded-2xl border border-white/10 bg-[#35513d] p-8 transition duration-200 ease-out delay-0 hover:-translate-y-1.5 hover:border-sage/60 hover:shadow-[0_20px_45px_-15px_rgba(164,184,144,0.35)]">
+        <div class="flex h-14 w-14 items-center justify-center rounded-full border border-sage/20 bg-sage/10">
+          <i class="ph-fill ph-leaf text-2xl text-sage"></i>
+        </div>
+        <h3 class="mt-6 font-serif text-xl font-bold text-white">Eco-Friendly Products</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-400">Safe for kids, pets, and the planet without sacrificing results.</p>
+      </div>
+
+      <div class="reveal-scroll rounded-2xl border border-white/10 bg-[#35513d] p-8 transition duration-200 ease-out delay-0 hover:-translate-y-1.5 hover:border-sage/60 hover:shadow-[0_20px_45px_-15px_rgba(164,184,144,0.35)]">
+        <div class="flex h-14 w-14 items-center justify-center rounded-full border border-sage/20 bg-sage/10">
+          <i class="ph-fill ph-thumbs-up text-2xl text-sage"></i>
+        </div>
+        <h3 class="mt-6 font-serif text-xl font-bold text-white">100% Satisfaction Guarantee</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-400">If you're not happy, we'll come back and make it right.</p>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:80ms] rounded-2xl border border-white/10 bg-[#35513d] p-8 transition duration-200 ease-out delay-0 hover:-translate-y-1.5 hover:border-sage/60 hover:shadow-[0_20px_45px_-15px_rgba(164,184,144,0.35)]">
+        <div class="flex h-14 w-14 items-center justify-center rounded-full border border-sage/20 bg-sage/10">
+          <i class="ph-fill ph-calendar-check text-2xl text-sage"></i>
+        </div>
+        <h3 class="mt-6 font-serif text-xl font-bold text-white">Flexible Scheduling</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-400">Same-day, weekend, and recurring appointments available.</p>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:160ms] rounded-2xl border border-white/10 bg-[#35513d] p-8 transition duration-200 ease-out delay-0 hover:-translate-y-1.5 hover:border-sage/60 hover:shadow-[0_20px_45px_-15px_rgba(164,184,144,0.35)]">
+        <div class="flex h-14 w-14 items-center justify-center rounded-full border border-sage/20 bg-sage/10">
+          <i class="ph-fill ph-magnifying-glass text-2xl text-sage"></i>
+        </div>
+        <h3 class="mt-6 font-serif text-xl font-bold text-white">Attention to Detail</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-400">We don't just clean; we make your space truly shine.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" class="relative overflow-hidden bg-[#F5F0E8] py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+    <div class="reveal-scroll mx-auto max-w-4xl text-center">
+      <p class="font-script text-leaf text-4xl sm:text-5xl leading-none">What Our Clients Say</p>
+      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
+        Trusted by Hundreds<br>
+        of <span class="text-leaf">Happy Clients</span>
+      </h2>
+      <p class="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg lg:whitespace-nowrap">
+        Don't just take our word for it, hear from homeowners and businesses across San Diego County.
+      </p>
+    </div>
+  </div>
+
+  <div class="reviews-marquee reveal-scroll relative mt-14 overflow-hidden pb-7 sm:mt-16">
+    <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#F5F0E8] to-transparent sm:w-32"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#F5F0E8] to-transparent sm:w-32"></div>
+
+    <div class="reviews-track items-stretch">
+      <div class="flex shrink-0 items-stretch gap-6 pr-6 sm:gap-8 sm:pr-8">
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"We use them for our Airbnb properties and they have never disappointed. Fast turnovers, immaculate results, and our guests always mention how clean everything is!"</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">M</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Michael K.</p>
+              <p class="text-xs text-gray-500">Airbnb Host</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"After our office renovation, Explosion Cleaning handled the post-construction cleanup flawlessly. The space was ready for business in no time. Highly recommend!"</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">J</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Jennifer T.</p>
+              <p class="text-xs text-gray-500">Business Owner</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"The deep cleaning transformed our home. Every corner was spotless, and the attention to detail was incredible. We've already booked them for recurring service."</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">S</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Sarah M.</p>
+              <p class="text-xs text-gray-500">Homeowner</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"Reliable, professional, and thorough. They manage multiple properties for us and always deliver consistent, high-quality results. A true asset to our business."</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">D</div>
+            <div>
+              <p class="text-sm font-bold text-forest">David R.</p>
+              <p class="text-xs text-gray-500">Property Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"I was amazed at how they made our old kitchen look brand new. The team was friendly, on time, and left the place smelling amazing. Worth every penny."</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">E</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Emily W.</p>
+              <p class="text-xs text-gray-500">Homeowner</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"Their move-in/move-out cleaning is a lifesaver. They handled everything from top to bottom, and I didn't have to lift a finger. Five stars all the way!"</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">C</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Carlos G.</p>
+              <p class="text-xs text-gray-500">Airbnb Host</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex shrink-0 items-stretch gap-6 pr-6 sm:gap-8 sm:pr-8" aria-hidden="true">
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"We use them for our Airbnb properties and they have never disappointed. Fast turnovers, immaculate results, and our guests always mention how clean everything is!"</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">M</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Michael K.</p>
+              <p class="text-xs text-gray-500">Airbnb Host</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"After our office renovation, Explosion Cleaning handled the post-construction cleanup flawlessly. The space was ready for business in no time. Highly recommend!"</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">J</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Jennifer T.</p>
+              <p class="text-xs text-gray-500">Business Owner</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"The deep cleaning transformed our home. Every corner was spotless, and the attention to detail was incredible. We've already booked them for recurring service."</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">S</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Sarah M.</p>
+              <p class="text-xs text-gray-500">Homeowner</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"Reliable, professional, and thorough. They manage multiple properties for us and always deliver consistent, high-quality results. A true asset to our business."</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">D</div>
+            <div>
+              <p class="text-sm font-bold text-forest">David R.</p>
+              <p class="text-xs text-gray-500">Property Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"I was amazed at how they made our old kitchen look brand new. The team was friendly, on time, and left the place smelling amazing. Worth every penny."</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">E</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Emily W.</p>
+              <p class="text-xs text-gray-500">Homeowner</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-[320px] shrink-0 flex-col rounded-2xl border border-forest/10 bg-white p-8 shadow-[0_10px_35px_-12px_rgba(44,69,50,0.15)] sm:w-[380px]">
+          <div class="flex gap-1">
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+            <i class="ph-fill ph-star text-sm text-leaf"></i>
+          </div>
+          <p class="mt-4 flex-1 text-sm italic leading-relaxed text-gray-600">"Their move-in/move-out cleaning is a lifesaver. They handled everything from top to bottom, and I didn't have to lift a finger. Five stars all the way!"</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-leaf text-sm font-bold text-white">C</div>
+            <div>
+              <p class="text-sm font-bold text-forest">Carlos G.</p>
+              <p class="text-xs text-gray-500">Airbnb Host</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section id="contact-cta" class="bg-forest py-20 sm:py-28">
+  <div class="mx-auto max-w-[88rem] px-6 sm:px-8 lg:px-12">
+    <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
+
+      <!-- Left: image -->
+      <div class="reveal-scroll relative order-2 mx-auto w-full max-w-sm lg:order-1 lg:max-w-none">
+        <div class="absolute -inset-10 rounded-[2.5rem] bg-sage/20 blur-3xl"></div>
+        <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.7)]">
+          <img
+            src="Media/Explosion%20Cleaning%20Services%20(2).jpg"
+            alt="Explosion Cleaning Service team member cleaning with a spray bottle"
+            class="aspect-[1024/1538] w-full object-cover"
+          >
+          <div class="absolute bottom-5 left-5 sm:bottom-6 sm:left-6">
+            <span class="inline-flex items-center rounded-full bg-sage px-4 py-2 text-xs font-bold uppercase tracking-wide text-forest shadow-[0_10px_25px_-8px_rgba(164,184,144,0.6)] sm:text-sm">
+              Hard Work &amp; Dedication
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: text + CTAs -->
+      <div class="reveal-scroll [animation-delay:120ms] order-1 flex min-w-0 flex-col items-center justify-center self-stretch lg:order-2">
+        <div class="w-full max-w-xl text-left max-md:text-center">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-sage">Ready To Get Started?</p>
+
+          <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-white">
+            Get Your <span class="text-sage">Free</span><br>
+            <span class="text-sage">Estimate Today!</span>
+          </h2>
+
+          <p class="mt-5 text-base leading-relaxed text-gray-400 sm:text-lg">
+            Call or text us now for a no-obligation quote. Experience the Explosion Cleaning difference.
+          </p>
+
+          <a href="tel:6192406951" class="mt-8 flex items-center max-md:justify-center gap-3 text-sage transition hover:text-sage-bright">
+            <i class="ph-fill ph-phone text-3xl"></i>
+            <span class="font-serif text-3xl font-black sm:text-4xl">(619) 240-6951</span>
+          </a>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4 max-md:mx-auto max-md:max-w-xs max-md:flex-col max-md:items-stretch">
+            <a
+              href="tel:6192406951"
+              class="inline-flex items-center max-md:justify-center gap-2 rounded-full bg-sage px-7 py-3.5 text-sm font-bold text-forest transition duration-200 ease-out delay-0 hover:bg-sage-bright hover:-translate-y-0.5 active:scale-[0.98]"
+            >
+              <i class="ph-fill ph-phone text-base"></i>
+              Call Now
+            </a>
+            <a
+              href="sms:6192406951?body=Hi%20Explosion%20Cleaning%20Service,%20I%20would%20like%20a%20quote%20for%20"
+              class="inline-flex items-center max-md:justify-center gap-2 rounded-full border border-sage/50 px-7 py-3.5 text-sm font-bold text-sage transition duration-200 ease-out delay-0 hover:border-sage hover:bg-white/10 hover:-translate-y-0.5 active:scale-[0.98]"
+            >
+              <i class="ph-fill ph-chat-circle-text text-base text-sage"></i>
+              Text Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSTANT ESTIMATE FORM ===================== -->
+<section id="estimate" class="bg-neutral-50 py-20 sm:py-28">
+  <div class="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
+
+    <div class="reveal-scroll text-center">
+      <p class="font-script text-leaf text-4xl sm:text-5xl leading-none">Online Quote</p>
+      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
+        Instant Cleaning <span class="text-leaf">Estimate</span>
+      </h2>
+      <p class="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg lg:whitespace-nowrap">
+        Select your options below to see a real-time price estimation. Submit the form to request booking.
+      </p>
+    </div>
+
+    <div class="reveal-scroll mt-12 rounded-2xl bg-white p-6 shadow-[0_20px_60px_-15px_rgba(44,69,50,0.15)] sm:mt-14 sm:p-10 lg:p-12">
+      <!-- TODO before launch:
+           1) FormSubmit emails a one-time activation link to explosioncleaningsd@gmail.com the first time the form is submitted; it must be clicked once before leads are delivered.
+           (_next below already points to the live domain's custom thank-you.html page.) -->
+      <form action="https://formsubmit.co/explosioncleaningsd@gmail.com" method="POST" id="estimateForm" class="space-y-10">
+
+        <input type="hidden" name="_captcha" value="false">
+        <!-- FormSubmit redirects here after a successful submit (custom thank-you page) -->
+        <input type="hidden" name="_next" value="https://explosioncleaningca.com/thank-you.html">
+        <input type="hidden" name="_subject" value="New Cleaning Estimate Request">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <!-- Section 1 -->
+        <div>
+          <h3 class="font-serif text-xl font-bold text-forest">1. Tell Us About Your Space</h3>
+          <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div>
+              <label class="form-label" for="service_requested">Service Requested <span class="text-leaf">*</span></label>
+              <select id="service_requested" name="Service Requested" required class="form-input">
+                <option value="" disabled selected>Select a service</option>
+                <option>General House Cleaning</option>
+                <option>Deep Cleaning</option>
+                <option>Move In/Out</option>
+                <option>Airbnb</option>
+                <option>Post Construction</option>
+                <option>Commercial</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="square_footage">Approx. Square Footage <span class="text-leaf">*</span></label>
+              <input type="text" inputmode="numeric" id="square_footage" name="Approx. Square Footage" required placeholder="1200" class="form-input">
+            </div>
+          </div>
+          <div class="mt-6">
+            <label class="form-label" for="service_frequency">Service Frequency <span class="text-leaf">*</span></label>
+            <select id="service_frequency" name="Service Frequency" required class="form-input">
+              <option value="" disabled selected>Select a frequency</option>
+              <option>One-Time Clean</option>
+              <option>Weekly</option>
+              <option>Bi-Weekly</option>
+              <option>Monthly</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="border-t border-forest/10 pt-10">
+          <h3 class="font-serif text-xl font-bold text-forest">2. Property Details</h3>
+          <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div>
+              <label class="form-label">Bedrooms</label>
+              <div class="flex items-center justify-between gap-2 rounded-full border border-forest/15 px-2 py-1.5">
+                <button type="button" class="stepper-btn" data-stepper="bedrooms" data-action="decrement" aria-label="Decrease bedrooms">
+                  <i class="ph-bold ph-minus"></i>
+                </button>
+                <input type="text" inputmode="numeric" id="bedrooms" name="Bedrooms" value="2" readonly class="stepper-value">
+                <button type="button" class="stepper-btn" data-stepper="bedrooms" data-action="increment" aria-label="Increase bedrooms">
+                  <i class="ph-bold ph-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Toilets (Half Bath)</label>
+              <div class="flex items-center justify-between gap-2 rounded-full border border-forest/15 px-2 py-1.5">
+                <button type="button" class="stepper-btn" data-stepper="toilets" data-action="decrement" aria-label="Decrease toilets">
+                  <i class="ph-bold ph-minus"></i>
+                </button>
+                <input type="text" inputmode="numeric" id="toilets" name="Toilets (Half Bath)" value="1" readonly class="stepper-value">
+                <button type="button" class="stepper-btn" data-stepper="toilets" data-action="increment" aria-label="Increase toilets">
+                  <i class="ph-bold ph-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Showers / Tub (Full Baths)</label>
+              <div class="flex items-center justify-between gap-2 rounded-full border border-forest/15 px-2 py-1.5">
+                <button type="button" class="stepper-btn" data-stepper="showers" data-action="decrement" aria-label="Decrease showers">
+                  <i class="ph-bold ph-minus"></i>
+                </button>
+                <input type="text" inputmode="numeric" id="showers" name="Showers / Tub (Full Baths)" value="1" readonly class="stepper-value">
+                <button type="button" class="stepper-btn" data-stepper="showers" data-action="increment" aria-label="Increase showers">
+                  <i class="ph-bold ph-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div>
+              <label class="form-label" for="pets">Do you have pets?</label>
+              <select id="pets" name="Pets" class="form-input">
+                <option>No Pets</option>
+                <option>Yes - Dog</option>
+                <option>Yes - Cat</option>
+                <option>Yes - Both</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="clutter">Amount of Clutter</label>
+              <select id="clutter" name="Amount of Clutter" class="form-input">
+                <option>Light</option>
+                <option selected>Average</option>
+                <option>Heavy</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="border-t border-forest/10 pt-10">
+          <h3 class="font-serif text-xl font-bold text-forest">3. Cleaning Requirements</h3>
+
+          <div class="mt-6">
+            <label class="form-label" for="cleaning_level">Level of Cleaning Required (1-10 Scale, 10 is dirtiest)</label>
+            <div class="flex items-center gap-4">
+              <input type="range" id="cleaning_level" name="Cleaning Level (1-10)" min="1" max="10" value="5" class="green-range">
+              <span id="cleaningLevelValue" class="w-8 shrink-0 text-center font-serif text-lg font-black text-leaf">5</span>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <span class="form-label">Types of Flooring (Check all that apply) <span class="text-leaf">*</span></span>
+            <div id="flooringGroup" class="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3">
+              <label class="checkbox-item">
+                <input type="checkbox" name="Flooring" value="Hardwood">
+                Hardwood
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Flooring" value="Vinyl">
+                Vinyl
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Flooring" value="Carpet">
+                Carpet
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Flooring" value="Ceramic">
+                Ceramic
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Flooring" value="Stone Tile">
+                Stone Tile
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="Flooring" value="Laminate">
+                Laminate
+              </label>
+            </div>
+            <p id="flooringError" class="mt-2 hidden text-xs font-semibold text-red-600">Please select at least one flooring type.</p>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="border-t border-forest/10 pt-10">
+          <h3 class="font-serif text-xl font-bold text-forest">4. Select Add-on Services <span class="font-normal text-gray-500">(Optional)</span></h3>
+          <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
+            <label class="checkbox-item">
+              <input type="checkbox" name="Add-ons" value="Inside Oven (+$40)">
+              Inside Oven <span class="text-leaf">(+$40)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="Add-ons" value="Inside Refrigerator (+$60)">
+              Inside Refrigerator <span class="text-leaf">(+$60)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="Add-ons" value="Inside Cabinets (+$60)">
+              Inside Cabinets <span class="text-leaf">(+$60)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="Add-ons" value="Basements (+$40)">
+              Basements <span class="text-leaf">(+$40)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="Add-ons" value="Interior Windows (+$50)">
+              Interior Windows <span class="text-leaf">(+$50)</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="Add-ons" value="Pet Hair Removal (+$40)">
+              Pet Hair Removal <span class="text-leaf">(+$40)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="border-t border-forest/10 pt-10">
+          <button
+            type="submit"
+            class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-leaf px-8 py-4 text-base font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest active:scale-[0.99]"
+          >
+            <i class="ph-fill ph-calendar-check text-lg"></i>
+            Get My Estimate
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="bg-forest py-20 sm:py-28">
+  <div class="mx-auto max-w-3xl px-6 sm:px-8 lg:px-12">
+
+    <div class="reveal-scroll text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-sage">Frequently Asked Questions</p>
+      <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-white">
+        Got <span class="text-sage">Questions?</span>
+      </h2>
+      <p class="mt-5 text-base sm:text-lg leading-relaxed text-gray-400">
+        Find answers to our most commonly asked questions below.
+      </p>
+    </div>
+
+    <div class="reveal-scroll mt-12 divide-y divide-white/10 border-t border-b border-white/10 sm:mt-16">
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger flex w-full items-center justify-between gap-6 py-6 text-left" aria-expanded="false">
+          <span class="font-serif text-base font-bold text-white sm:text-lg">What areas does Explosion Cleaning Services serve?</span>
+          <i class="ph-bold ph-plus faq-icon shrink-0 text-lg text-sage"></i>
+        </button>
+        <div class="faq-panel">
+          <div>
+            <p class="pb-6 text-sm leading-relaxed text-gray-400 sm:text-base">
+              We proudly serve San Diego County, including Chula Vista, Coronado, Del Mar, Otay Ranch, Eastlake, and surrounding areas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger flex w-full items-center justify-between gap-6 py-6 text-left" aria-expanded="false">
+          <span class="font-serif text-base font-bold text-white sm:text-lg">Is Explosion Cleaning Services licensed and insured?</span>
+          <i class="ph-bold ph-plus faq-icon shrink-0 text-lg text-sage"></i>
+        </button>
+        <div class="faq-panel">
+          <div>
+            <p class="pb-6 text-sm leading-relaxed text-gray-400 sm:text-base">
+              Yes! We are fully licensed, bonded, and insured for your complete peace of mind. Our team is also background-checked and professionally trained.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger flex w-full items-center justify-between gap-6 py-6 text-left" aria-expanded="false">
+          <span class="font-serif text-base font-bold text-white sm:text-lg">What cleaning services do you offer?</span>
+          <i class="ph-bold ph-plus faq-icon shrink-0 text-lg text-sage"></i>
+        </button>
+        <div class="faq-panel">
+          <div>
+            <p class="pb-6 text-sm leading-relaxed text-gray-400 sm:text-base">
+              We offer Regular Cleaning, Deep Cleaning, Move In/Out Cleaning, Airbnb Cleaning, Post-Construction Cleaning, and Commercial Cleaning, along with customizable add-on services.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger flex w-full items-center justify-between gap-6 py-6 text-left" aria-expanded="false">
+          <span class="font-serif text-base font-bold text-white sm:text-lg">How can I get a free estimate?</span>
+          <i class="ph-bold ph-plus faq-icon shrink-0 text-lg text-sage"></i>
+        </button>
+        <div class="faq-panel">
+          <div>
+            <p class="pb-6 text-sm leading-relaxed text-gray-400 sm:text-base">
+              You can fill out our Instant Cleaning Estimate form above, call us at (619) 240-6951, or text us and we'll get back to you with a quote.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger flex w-full items-center justify-between gap-6 py-6 text-left" aria-expanded="false">
+          <span class="font-serif text-base font-bold text-white sm:text-lg">Do I need to be home during the cleaning?</span>
+          <i class="ph-bold ph-plus faq-icon shrink-0 text-lg text-sage"></i>
+        </button>
+        <div class="faq-panel">
+          <div>
+            <p class="pb-6 text-sm leading-relaxed text-gray-400 sm:text-base">
+              Not at all. Many of our clients provide a key, lockbox code, or garage code. We treat your home with the utmost respect and care.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger flex w-full items-center justify-between gap-6 py-6 text-left" aria-expanded="false">
+          <span class="font-serif text-base font-bold text-white sm:text-lg">What is your cancellation policy?</span>
+          <i class="ph-bold ph-plus faq-icon shrink-0 text-lg text-sage"></i>
+        </button>
+        <div class="faq-panel">
+          <div>
+            <p class="pb-6 text-sm leading-relaxed text-gray-400 sm:text-base">
+              We kindly ask for at least 24 hours notice for cancellations or rescheduling so we can adjust our schedule accordingly.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOME DECORATING ===================== -->
+<section id="decorating" class="bg-white py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-6 sm:px-8 lg:px-12">
+
+    <div class="reveal-scroll mx-auto max-w-3xl text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-leaf sm:text-sm">Beyond Cleaning</p>
+      <h2 class="mt-4 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
+        Home <span class="text-leaf">Decorating &amp; Styling</span>
+      </h2>
+      <p class="mt-4 font-serif text-lg italic text-gray-500 sm:text-xl">Refresh your space with Dulce</p>
+      <div class="mx-auto mt-6 h-px w-16 bg-leaf/40"></div>
+      <p class="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
+        Bring new life to your home with thoughtfully selected décor and personalized styling. Choose the package that fits your vision and budget.
+      </p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 items-stretch gap-8 sm:mt-16 lg:grid-cols-2 lg:gap-10">
+      <div class="reveal-scroll flex h-full flex-col rounded-2xl border border-leaf/25 bg-white p-8 shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] transition duration-200 ease-out delay-0 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_-12px_rgba(44,69,50,0.25)] sm:p-10">
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-[#F5F0E8] text-leaf">
+          <i class="ph-fill ph-flower text-2xl"></i>
+        </div>
+        <h3 class="mt-6 font-serif text-2xl font-bold text-forest sm:text-3xl">Basic Room Refresh</h3>
+        <p class="mt-3 font-serif text-lg font-bold text-leaf sm:text-xl">$550 Décor Budget + $75 per Hour</p>
+        <p class="mt-4 text-[15px] leading-relaxed text-gray-600">Perfect for refreshing one room or a designated area using your existing furniture and new decorative accents.</p>
+        <div class="mt-6 border-t border-forest/10 pt-6">
+          <p class="text-sm font-bold text-forest">Your $550 budget covers approved décor purchases, which may include:</p>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>Decorative pillows and throws.</span></li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>Artwork and small mirrors.</span></li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>Vases and decorative plants.</span></li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>Tabletop accessories and finishing touches.</span></li>
+          </ul>
+        </div>
+        <p class="mt-6 flex-1 text-[13px] leading-relaxed text-gray-500">Major furniture purchases are outside the Basic décor budget. Decorating services and hands-on work are billed separately at $75 per hour.</p>
+        <a href="#estimate" class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-leaf px-6 py-3.5 text-sm font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest">
+          Book Now
+        </a>
+      </div>
+
+      <div class="reveal-scroll [animation-delay:80ms] flex h-full flex-col rounded-2xl border border-leaf/25 bg-white p-8 shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] transition duration-200 ease-out delay-0 hover:-translate-y-1.5 hover:shadow-[0_20px_45px_-12px_rgba(44,69,50,0.25)] sm:p-10">
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-[#F5F0E8] text-leaf">
+          <i class="ph-fill ph-armchair text-2xl"></i>
+        </div>
+        <h3 class="mt-6 font-serif text-2xl font-bold text-forest sm:text-3xl">Deluxe Home Styling</h3>
+        <p class="mt-3 font-serif text-lg font-bold text-leaf sm:text-xl">Custom Décor Budget + $75 per Hour</p>
+        <p class="mt-4 text-[15px] leading-relaxed text-gray-600">A personalized option for larger transformations, multiple rooms, or projects that include new furniture.</p>
+        <div class="mt-6 border-t border-forest/10 pt-6">
+          <p class="text-sm font-bold text-forest">Your customized decorating plan may include:</p>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>Furniture and statement pieces.</span></li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>Rugs, curtains, and decorative lighting.</span></li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>Artwork, mirrors, and coordinated accessories.</span></li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>Furniture arrangement and finishing touches.</span></li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-gray-700"><i class="ph-bold ph-check mt-0.5 shrink-0 text-base text-leaf"></i><span>A cohesive style across your selected spaces.</span></li>
+          </ul>
+        </div>
+        <p class="mt-6 flex-1 text-[13px] leading-relaxed text-gray-500">Your décor budget is determined by your project’s size, needs, and approved selections. Decorating services and hands-on work are billed separately at $75 per hour.</p>
+        <a href="#estimate" class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-leaf px-6 py-3.5 text-sm font-bold text-white transition duration-200 ease-out delay-0 hover:bg-forest">
+          Book Now
+        </a>
+      </div>
+
+    </div>
+
+    <div class="reveal-scroll mt-14 rounded-2xl bg-[#F5F0E8] px-6 py-10 text-center sm:mt-16 sm:px-10">
+      <h3 class="font-serif text-2xl font-bold text-forest">What Our Hourly Service Includes</h3>
+      <p class="mt-2 text-[15px] text-gray-600">For both packages, the $75 hourly rate covers time spent on:</p>
+      <ul class="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-3 text-left">
+        <li class="flex items-center gap-2.5 text-[15px] font-semibold text-forest"><i class="ph-bold ph-check shrink-0 text-base text-leaf"></i>Consultation and planning.</li>
+        <li class="flex items-center gap-2.5 text-[15px] font-semibold text-forest"><i class="ph-bold ph-check shrink-0 text-base text-leaf"></i>Finding and selecting décor.</li>
+        <li class="flex items-center gap-2.5 text-[15px] font-semibold text-forest"><i class="ph-bold ph-check shrink-0 text-base text-leaf"></i>Shopping for approved items.</li>
+        <li class="flex items-center gap-2.5 text-[15px] font-semibold text-forest"><i class="ph-bold ph-check shrink-0 text-base text-leaf"></i>Arranging furniture and accessories.</li>
+        <li class="flex items-center gap-2.5 text-[15px] font-semibold text-forest"><i class="ph-bold ph-check shrink-0 text-base text-leaf"></i>Setup, styling, and final adjustments.</li>
+      </ul>
+    </div>
+
+    <div class="reveal-scroll mx-auto mt-10 max-w-4xl rounded-r-2xl rounded-l-md border border-leaf/25 border-l-4 border-l-leaf bg-white p-6 shadow-[0_2px_20px_-4px_rgba(44,69,50,0.08)] sm:p-8">
+      <h3 class="font-serif text-xl font-bold text-forest sm:text-2xl">Simple, Transparent Pricing</h3>
+      <p class="mt-3 text-[15px] leading-relaxed text-gray-700">
+        Your total = décor purchases + decorating services at $75 per hour + approved additional expenses. For example, a $550 décor budget with four hours of service totals $850, before any applicable sales tax, delivery, or other approved expenses. You will receive an estimated budget and service hours before work begins. Purchases and spending beyond your approved budget require your approval. Décor purchased for your project is yours to keep.
+      </p>
+      <p class="mt-4 text-[13px] leading-relaxed text-gray-500">
+        Cleaning, painting, repairs, remodeling, specialized installation, and furniture rental are not included. Delivery and transportation are quoted separately when needed.
+      </p>
+    </div>
+
+    <div class="reveal-scroll mx-auto mt-16 max-w-2xl text-center sm:mt-20">
+      <h3 class="font-serif text-3xl font-bold text-forest sm:text-4xl">Ready to Refresh Your Home?</h3>
+      <p class="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">Let’s create a space that feels beautiful, comfortable, and uniquely yours.</p>
+      <p class="mt-4 font-serif text-lg italic text-leaf">Dulce | Home Decorating &amp; Style</p>
+      <a href="#estimate" class="mt-8 inline-flex items-center justify-center rounded-full bg-leaf px-8 py-4 text-sm font-bold text-white shadow-[0_10px_25px_-8px_rgba(44,69,50,0.6)] transition duration-200 ease-out delay-0 hover:bg-forest sm:text-base">
+        Book a Decorating Consultation
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== SERVICE AREA ===================== -->
+<section id="areas" class="relative overflow-hidden bg-[#F5F0E8] py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+    <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-16">
+
+      <!-- Left: map -->
+      <div class="reveal-scroll relative">
+        <div class="relative overflow-hidden rounded-2xl border border-forest/10 shadow-[0_20px_60px_-15px_rgba(44,69,50,0.15)]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214577.74043263032!2d-117.27290784009803!3d32.824668004818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530fad921e4b%3A0xd3a21fdfd15df79!2sSan%20Diego%2C%20CA!5e0!3m2!1sen!2sus!4v1789961230079!5m2!1sen!2sus"
+            class="aspect-[4/3] w-full"
+            style="border:0"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Map of Explosion Cleaning Service's San Diego County service area"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Right: text + city list -->
+      <div class="reveal-scroll [animation-delay:120ms] flex flex-col justify-center self-stretch">
+        <p class="font-script text-leaf text-4xl sm:text-5xl leading-none">Where We Work</p>
+
+        <h2 class="mt-3 font-serif font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-forest">
+          Proudly Serving <span class="text-leaf">San Diego County</span>
+        </h2>
+
+        <p class="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
+          We proudly serve every corner of the county,<br>
+          treating each home and business with pride.
+        </p>
+
+        <div class="mt-8 grid grid-cols-2 gap-x-6 gap-y-4">
+          <div class="flex items-center gap-3">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-sm"><i class="ph-fill ph-map-pin text-base text-leaf"></i></span>
+            <span class="text-sm font-semibold text-forest sm:text-base">San Diego</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-sm"><i class="ph-fill ph-map-pin text-base text-leaf"></i></span>
+            <span class="text-sm font-semibold text-forest sm:text-base">Chula Vista</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-sm"><i class="ph-fill ph-map-pin text-base text-leaf"></i></span>
+            <span class="text-sm font-semibold text-forest sm:text-base">Coronado</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-sm"><i class="ph-fill ph-map-pin text-base text-leaf"></i></span>
+            <span class="text-sm font-semibold text-forest sm:text-base">Del Mar</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-sm"><i class="ph-fill ph-map-pin text-base text-leaf"></i></span>
+            <span class="text-sm font-semibold text-forest sm:text-base">Otay Ranch</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-sm"><i class="ph-fill ph-map-pin text-base text-leaf"></i></span>
+            <span class="text-sm font-semibold text-forest sm:text-base">Eastlake</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="border-t-2 border-sage bg-forest pb-8 pt-16 sm:pt-20">
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.7fr_1fr_1fr_1.4fr] lg:gap-8">
+
+      <!-- Column 1: Brand -->
+      <div class="lg:mr-8 max-md:flex max-md:flex-col max-md:items-center max-md:text-center">
+        <img
+          src="Media/Explosion%20Cleaning%20Service%20Logo.png"
+          alt="Explosion Cleaning Service"
+          class="h-32 w-auto sm:h-40"
+        >
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-gray-400">
+          Residential &amp; commercial cleaning in<br>
+          San Diego County. We make it shine.
+        </p>
+        <div class="mt-5 flex items-center gap-3 max-md:justify-center">
+          <a
+            href="https://www.facebook.com/profile.php?id=61590186370284"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-sage transition duration-200 ease-out hover:border-sage hover:bg-sage/10"
+          >
+            <i class="ph-fill ph-facebook-logo text-base"></i>
+          </a>
+          <a
+            href="#"
+            aria-label="Yelp"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-sage transition duration-200 ease-out hover:border-sage hover:bg-sage/10"
+          >
+            <i class="ph-fill ph-storefront text-base"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@explosioncleaningservice"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-sage transition duration-200 ease-out hover:border-sage hover:bg-sage/10"
+          >
+            <i class="ph-fill ph-tiktok-logo text-base"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Our Menu -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wide text-white">Our Menu</h3>
+        <ul class="mt-5 space-y-3">
+          <li><a href="#home" class="text-sm text-gray-400 transition hover:text-sage">Home</a></li>
+          <li><a href="#services" class="text-sm text-gray-400 transition hover:text-sage">Our Services</a></li>
+          <li><a href="#pricing" class="text-sm text-gray-400 transition hover:text-sage">Pricing</a></li>
+          <li><a href="#why-us" class="text-sm text-gray-400 transition hover:text-sage">Why Us</a></li>
+          <li><a href="#areas" class="text-sm text-gray-400 transition hover:text-sage">Service Areas</a></li>
+          <li><a href="#reviews" class="text-sm text-gray-400 transition hover:text-sage">Our Reviews</a></li>
+          <li><a href="#faq" class="text-sm text-gray-400 transition hover:text-sage">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Our Services -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wide text-white">Our Services</h3>
+        <ul class="mt-5 space-y-3">
+          <li><a href="#services" class="text-sm text-gray-400 transition hover:text-sage">Regular Cleaning</a></li>
+          <li><a href="#services" class="text-sm text-gray-400 transition hover:text-sage">Deep Cleaning</a></li>
+          <li><a href="#services" class="text-sm text-gray-400 transition hover:text-sage">Move In/Out Cleaning</a></li>
+          <li><a href="#services" class="text-sm text-gray-400 transition hover:text-sage">Airbnb Cleaning</a></li>
+          <li><a href="#services" class="text-sm text-gray-400 transition hover:text-sage">Post Construction</a></li>
+          <li><a href="#services" class="text-sm text-gray-400 transition hover:text-sage">Commercial Cleaning</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Reach Out -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wide text-white">Reach Out</h3>
+        <ul class="mt-5 space-y-4">
+          <li class="flex items-start gap-3">
+            <i class="ph-fill ph-phone mt-0.5 shrink-0 text-base text-sage"></i>
+            <a href="tel:6192406951" class="text-sm text-gray-400 transition hover:text-sage">(619) 240-6951</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="ph-fill ph-envelope-simple mt-0.5 shrink-0 text-base text-sage"></i>
+            <a href="mailto:info@explosioncleaningservice.com" class="whitespace-nowrap text-sm text-gray-400 transition hover:text-sage">info@explosioncleaningservice.com</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="ph-fill ph-map-pin mt-0.5 shrink-0 text-base text-sage"></i>
+            <span class="text-sm text-gray-400">Serving San Diego County, CA</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-14 border-t border-white/10 pt-8 sm:mt-16">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <p class="text-center text-xs text-gray-500 sm:text-left">
+          &copy; <span id="currentYear"></span> Explosion Cleaning Service. All Rights Reserved.
+        </p>
+        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
+          Licensed <span class="text-sage">&bull;</span> Trustworthy <span class="text-sage">&bull;</span> Insured
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING WIDGETS ===================== -->
+<button
+  id="scrollTopBtn"
+  type="button"
+  aria-label="Scroll to top"
+  class="scroll-top-btn fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-leaf text-white shadow-[0_6px_16px_-4px_rgba(0,0,0,0.35)] transition duration-200 ease-out hover:bg-leaf-light hover:-translate-y-1 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14"
+>
+  <i class="ph-bold ph-arrow-up text-lg sm:text-xl"></i>
+</button>
+
+<div class="fixed bottom-4 left-4 z-40 sm:bottom-8 sm:left-8">
+  <div id="contactPopup" class="contact-popup">
+    <div>
+      <div class="mb-4 w-60 rounded-2xl border border-forest/10 bg-white p-4 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.35)] sm:w-64">
+        <div class="flex items-center justify-between">
+          <p class="text-sm font-bold text-forest">Need a Quick Quote?</p>
+          <button
+            type="button"
+            id="contactPopupClose"
+            aria-label="Close contact options"
+            class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-gray-400 transition duration-200 ease-out hover:bg-forest/5 hover:text-forest"
+          >
+            <i class="ph-bold ph-x text-sm"></i>
+          </button>
+        </div>
+        <div class="mt-3 flex flex-col gap-2">
+          <a
+            href="tel:6192406951"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-leaf px-4 py-2.5 text-sm font-bold text-white transition duration-200 ease-out hover:bg-forest"
+          >
+            <i class="ph-fill ph-phone text-base"></i>
+            Call Us
+          </a>
+          <a
+            href="sms:6192406951?body=Hi%20Explosion%20Cleaning%20Service,%20I%20would%20like%20a%20quote%20for%20"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-leaf px-4 py-2.5 text-sm font-bold text-white transition duration-200 ease-out hover:bg-forest"
+          >
+            <i class="ph-fill ph-chat-circle-text text-base"></i>
+            Text Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button
+    id="contactToggleBtn"
+    type="button"
+    aria-label="Contact us"
+    aria-expanded="false"
+    aria-controls="contactPopup"
+    class="flex h-12 w-12 items-center justify-center rounded-full bg-leaf text-white shadow-[0_6px_16px_-4px_rgba(0,0,0,0.35)] transition duration-200 ease-out hover:bg-leaf-light hover:-translate-y-1 sm:h-14 sm:w-14"
+  >
+    <i class="ph-fill ph-chat-circle-text text-lg sm:text-xl"></i>
+  </button>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = menuBtn.querySelector('i');
+
+  menuBtn.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(isHidden));
+    menuIcon.className = isHidden ? 'ph-bold ph-x' : 'ph-bold ph-list';
+  });
+
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuIcon.className = 'ph-bold ph-list';
+    });
+  });
+
+  const revealTargets = document.querySelectorAll('.reveal-scroll');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+    revealTargets.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealTargets.forEach((el) => el.classList.add('in-view'));
+  }
+
+  const pricingTabs = document.querySelectorAll('.pricing-tab-btn');
+  const pricingPanels = {
+    flat: document.getElementById('pricing-panel-flat'),
+    addons: document.getElementById('pricing-panel-addons'),
+  };
+
+  pricingTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      pricingTabs.forEach((t) => {
+        t.classList.remove('bg-leaf', 'text-white', 'shadow-[0_10px_25px_-8px_rgba(44,69,50,0.6)]');
+        t.classList.add('border', 'border-forest/15', 'bg-white', 'text-gray-500');
+        t.setAttribute('aria-selected', 'false');
+      });
+
+      tab.classList.remove('border', 'border-forest/15', 'bg-white', 'text-gray-500');
+      tab.classList.add('bg-leaf', 'text-white', 'shadow-[0_10px_25px_-8px_rgba(44,69,50,0.6)]');
+      tab.setAttribute('aria-selected', 'true');
+
+      Object.values(pricingPanels).forEach((panel) => panel.classList.add('hidden'));
+      pricingPanels[tab.dataset.tab].classList.remove('hidden');
+    });
+  });
+
+  document.querySelectorAll('.stepper-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const input = document.getElementById(btn.dataset.stepper);
+      let value = parseInt(input.value, 10) || 0;
+      value = btn.dataset.action === 'increment' ? value + 1 : Math.max(0, value - 1);
+      input.value = value;
+    });
+  });
+
+  const cleaningLevel = document.getElementById('cleaning_level');
+  const cleaningLevelValue = document.getElementById('cleaningLevelValue');
+  if (cleaningLevel) {
+    const updateRangeFill = () => {
+      const min = Number(cleaningLevel.min) || 0;
+      const max = Number(cleaningLevel.max) || 100;
+      const pct = ((cleaningLevel.value - min) / (max - min)) * 100;
+      cleaningLevel.style.setProperty('--range-progress', pct + '%');
+      cleaningLevelValue.textContent = cleaningLevel.value;
+    };
+    cleaningLevel.addEventListener('input', updateRangeFill);
+    updateRangeFill();
+  }
+
+  const estimateForm = document.getElementById('estimateForm');
+  if (estimateForm) {
+    estimateForm.addEventListener('submit', (e) => {
+      const checkedFlooring = estimateForm.querySelectorAll('input[name="Flooring"]:checked');
+      const flooringError = document.getElementById('flooringError');
+      if (checkedFlooring.length === 0) {
+        e.preventDefault();
+        flooringError.classList.remove('hidden');
+        flooringError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        flooringError.classList.add('hidden');
+      }
+    });
+  }
+
+  const faqTriggers = document.querySelectorAll('.faq-trigger');
+  const setFaqIcon = (trigger, isOpen) => {
+    const icon = trigger.querySelector('.faq-icon');
+    icon.classList.toggle('ph-plus', !isOpen);
+    icon.classList.toggle('ph-minus', isOpen);
+  };
+
+  faqTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const panel = trigger.nextElementSibling;
+      const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+      faqTriggers.forEach((t) => {
+        if (t !== trigger) {
+          t.setAttribute('aria-expanded', 'false');
+          t.nextElementSibling.classList.remove('open');
+          setFaqIcon(t, false);
+        }
+      });
+
+      trigger.setAttribute('aria-expanded', String(!isOpen));
+      panel.classList.toggle('open', !isOpen);
+      setFaqIcon(trigger, !isOpen);
+    });
+  });
+
+  const currentYearEl = document.getElementById('currentYear');
+  if (currentYearEl) {
+    currentYearEl.textContent = new Date().getFullYear();
+  }
+
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const toggleScrollTopBtn = () => {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+  };
+  toggleScrollTopBtn();
+  window.addEventListener('scroll', toggleScrollTopBtn, { passive: true });
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  const contactToggleBtn = document.getElementById('contactToggleBtn');
+  const contactPopup = document.getElementById('contactPopup');
+  const contactPopupClose = document.getElementById('contactPopupClose');
+
+  const closeContactPopup = () => {
+    contactPopup.classList.remove('open');
+    contactToggleBtn.setAttribute('aria-expanded', 'false');
+  };
+  const openContactPopup = () => {
+    contactPopup.classList.add('open');
+    contactToggleBtn.setAttribute('aria-expanded', 'true');
+  };
+
+  contactToggleBtn.addEventListener('click', () => {
+    const isOpen = contactPopup.classList.contains('open');
+    isOpen ? closeContactPopup() : openContactPopup();
+  });
+  contactPopupClose.addEventListener('click', closeContactPopup);
+  document.addEventListener('click', (e) => {
+    if (
+      contactPopup.classList.contains('open') &&
+      !contactPopup.contains(e.target) &&
+      !contactToggleBtn.contains(e.target)
+    ) {
+      closeContactPopup();
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Explosion Cleaning Service</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2c4532">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: '#2c4532',
+          leaf: {
+            DEFAULT: '#556447',
+            light: '#667b55',
+          },
+          sage: {
+            DEFAULT: '#A4B890',
+            bright: '#C2D2B2',
+          },
+          cream: '#FFEECB',
+        },
+        fontFamily: {
+          sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          serif: ['"Playfair Display"', 'ui-serif', 'serif'],
+          script: ['"Alex Brush"', 'cursive'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root {
+    --dark-green: #2c4532;
+    --light-green: #556447;
+    --sage: #A4B890;
+    --cream: #FFEECB;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background-color: var(--dark-green); font-family: 'Manrope', sans-serif; overflow-x: hidden; }
+
+  ::selection {
+    background-color: var(--light-green);
+    color: #ffffff;
+  }
+  ::-moz-selection {
+    background-color: var(--light-green);
+    color: #ffffff;
+  }
+
+  .nav-link {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: color 0.25s ease;
+  }
+  .nav-link:hover { color: var(--sage); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .reveal-1 { animation-delay: 0.05s; }
+  .reveal-2 { animation-delay: 0.16s; }
+  .reveal-3 { animation-delay: 0.27s; }
+  .reveal-4 { animation-delay: 0.38s; }
+  .reveal-5 { animation-delay: 0.49s; }
+  .reveal-6 { animation-delay: 0.3s; }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; transform: none; }
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 34s linear infinite;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; flex-wrap: wrap; width: 100%; }
+    .marquee-track [aria-hidden="true"] { display: none; }
+  }
+
+  /* Reveal-on-scroll: the animation only supplies the "from" state (backwards fill), so once it
+     finishes it no longer holds opacity/transform and hover transforms on the element still work. */
+  .reveal-scroll:not(.in-view) {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .reveal-scroll.in-view {
+    animation: revealIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  @keyframes revealIn {
+    from { opacity: 0; transform: translateY(24px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-scroll:not(.in-view) { opacity: 1; transform: none; }
+    .reveal-scroll.in-view { animation: none; }
+  }
+
+  /* Services cards: hover uses transform + box-shadow + border-color only (border width never changes). */
+  .svc-card {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
+  }
+  .svc-card:hover {
+    transform: translate3d(0, -6px, 0);
+    border-color: rgba(85, 100, 71, 0.7);
+    box-shadow: 0 20px 45px -12px rgba(44, 69, 50, 0.35);
+  }
+
+  .reviews-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 50s linear infinite;
+  }
+  .reviews-marquee:hover .reviews-track { animation-play-state: paused; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reviews-track { animation: none; flex-wrap: wrap; width: 100%; }
+    .reviews-track [aria-hidden="true"] { display: none; }
+  }
+
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--dark-green);
+  }
+
+  .form-input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.925rem;
+    font-family: 'Manrope', sans-serif;
+    color: var(--dark-green);
+    background-color: #ffffff;
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: var(--light-green);
+    box-shadow: 0 0 0 3px rgba(85, 100, 71, 0.22);
+  }
+
+  .stepper-btn {
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: var(--dark-green);
+    background-color: #ffffff;
+    transition: border-color 0.2s ease-out, color 0.2s ease-out;
+  }
+  .stepper-btn:hover {
+    border-color: var(--light-green);
+    color: var(--light-green);
+  }
+
+  .stepper-value {
+    width: 100%;
+    max-width: 3.5rem;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-green);
+  }
+  .stepper-value:focus { outline: none; }
+
+  .checkbox-item {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--dark-green);
+  }
+
+  input[type="checkbox"] {
+    height: 1.15rem;
+    width: 1.15rem;
+    cursor: pointer;
+    accent-color: var(--light-green);
+  }
+
+  input[type="range"].green-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, var(--light-green) 0%, var(--light-green) var(--range-progress, 50%), #e5e5e5 var(--range-progress, 50%), #e5e5e5 100%);
+    outline: none;
+    cursor: pointer;
+  }
+  input[type="range"].green-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 22px;
+    width: 22px;
+    border-radius: 9999px;
+    background-color: var(--light-green);
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  input[type="range"].green-range::-moz-range-thumb {
+    height: 22px;
+    width: 22px;
+    border-radius: 9999px;
+    background-color: var(--light-green);
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+  }
+  .faq-panel.open { grid-template-rows: 1fr; }
+  .faq-panel > div { overflow: hidden; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-panel { transition: none; }
+  }
+
+
+  .hero-overlay { background: rgba(44, 69, 50, 0.7); }
+
+  .scroll-top-btn {
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .scroll-top-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .contact-popup {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
+  }
+  .contact-popup.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  .contact-popup > div { overflow: hidden; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-top-btn { transition: none; }
+    .contact-popup { transition: none; }
+  }
+</style>
+</head>
+
+<body class="bg-forest text-white antialiased">
+
+<!-- ===================== HEADER ===================== -->
+<header class="fixed inset-x-0 top-0 z-50">
+  <div class="absolute inset-0 bg-forest shadow-[0_8px_24px_-12px_rgba(0,0,0,0.5)] pointer-events-none"></div>
+
+  <div class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-10">
+    <a href="/" class="flex items-center shrink-0">
+      <img
+        src="Media/Explosion%20Cleaning%20Service%20Logo.png"
+        alt="Explosion Cleaning Service"
+        class="h-16 sm:h-20 lg:h-24 w-auto"
+      >
+    </a>
+
+    <nav class="hidden xl:flex items-center gap-8">
+      <a href="/#home" class="nav-link">Home</a>
+      <a href="/#services" class="nav-link">Our Services</a>
+      <a href="/#pricing" class="nav-link">Pricing</a>
+      <a href="/#why-us" class="nav-link">Why Us</a>
+      <a href="/#areas" class="nav-link">Service Areas</a>
+      <a href="/#reviews" class="nav-link">Our Reviews</a>
+      <a href="/#faq" class="nav-link">FAQs</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href="tel:+16192406951"
+        class="inline-flex items-center gap-2 rounded-full bg-sage px-4 sm:px-5 py-2.5 text-sm font-bold text-forest transition hover:bg-sage-bright active:scale-[0.98]"
+      >
+        <i class="ph-fill ph-phone text-base"></i>
+        <span class="hidden sm:inline">(619) 240-6951</span>
+      </a>
+
+      <button
+        id="menuBtn"
+        class="xl:hidden inline-flex items-center justify-center text-2xl text-white"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <i class="ph-bold ph-list"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden xl:hidden relative border-t border-white/10 bg-forest/95 backdrop-blur-md px-6 py-4">
+    <a href="/#home" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Home</a>
+    <a href="/#services" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Our Services</a>
+    <a href="/#pricing" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Pricing</a>
+    <a href="/#why-us" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Why Us</a>
+    <a href="/#areas" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Service Areas</a>
+    <a href="/#reviews" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white border-b border-white/5 hover:text-sage">Our Reviews</a>
+    <a href="/#faq" class="block py-3 text-xs font-bold uppercase tracking-[0.14em] text-white hover:text-sage">FAQs</a>
+  </div>
+</header>
+
+<!-- ===================== THANK YOU ===================== -->
+<main class="flex min-h-[100dvh] items-center justify-center bg-[#F5F0E8] px-6 pb-20 pt-36 sm:pt-44">
+  <div class="reveal reveal-1 w-full max-w-2xl rounded-3xl border border-leaf/15 bg-white p-8 text-center shadow-[0_20px_60px_-15px_rgba(44,69,50,0.2)] sm:p-14">
+    <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border-2 border-leaf bg-leaf/10 text-leaf">
+      <i class="ph-bold ph-check text-4xl"></i>
+    </div>
+    <p class="mt-8 text-xs font-bold uppercase tracking-[0.3em] text-leaf sm:text-sm">Request Received</p>
+    <h1 class="mt-3 font-serif text-5xl font-black leading-tight tracking-tight text-forest sm:text-6xl">Thank You!</h1>
+    <p class="mx-auto mt-6 max-w-md text-base leading-relaxed text-gray-600 sm:text-lg">
+      We'll get back to you within 24 hours with your free estimate. If you need immediate assistance, feel free to call or text us.
+    </p>
+    <div class="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row">
+      <a href="/" class="inline-flex items-center justify-center rounded-full border-2 border-leaf bg-leaf px-8 py-3.5 text-sm font-bold text-white transition duration-200 ease-out hover:border-forest hover:bg-forest">
+        Back to Home
+      </a>
+      <a href="tel:6192406951" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-leaf bg-transparent px-8 py-3.5 text-sm font-bold text-leaf transition duration-200 ease-out hover:bg-leaf hover:text-white">
+        <i class="ph-fill ph-phone text-base"></i>
+        Call Us Now
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="border-t-2 border-sage bg-forest pb-8 pt-16 sm:pt-20">
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.7fr_1fr_1fr_1.4fr] lg:gap-8">
+
+      <!-- Column 1: Brand -->
+      <div class="lg:mr-8 max-md:flex max-md:flex-col max-md:items-center max-md:text-center">
+        <img
+          src="Media/Explosion%20Cleaning%20Service%20Logo.png"
+          alt="Explosion Cleaning Service"
+          class="h-32 w-auto sm:h-40"
+        >
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-gray-400">
+          Residential &amp; commercial cleaning in<br>
+          San Diego County. We make it shine.
+        </p>
+        <div class="mt-5 flex items-center gap-3 max-md:justify-center">
+          <a
+            href="https://www.facebook.com/profile.php?id=61590186370284"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-sage transition duration-200 ease-out hover:border-sage hover:bg-sage/10"
+          >
+            <i class="ph-fill ph-facebook-logo text-base"></i>
+          </a>
+          <a
+            href="#"
+            aria-label="Yelp"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-sage transition duration-200 ease-out hover:border-sage hover:bg-sage/10"
+          >
+            <i class="ph-fill ph-storefront text-base"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@explosioncleaningservice"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-sage transition duration-200 ease-out hover:border-sage hover:bg-sage/10"
+          >
+            <i class="ph-fill ph-tiktok-logo text-base"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Our Menu -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wide text-white">Our Menu</h3>
+        <ul class="mt-5 space-y-3">
+          <li><a href="/#home" class="text-sm text-gray-400 transition hover:text-sage">Home</a></li>
+          <li><a href="/#services" class="text-sm text-gray-400 transition hover:text-sage">Our Services</a></li>
+          <li><a href="/#pricing" class="text-sm text-gray-400 transition hover:text-sage">Pricing</a></li>
+          <li><a href="/#why-us" class="text-sm text-gray-400 transition hover:text-sage">Why Us</a></li>
+          <li><a href="/#areas" class="text-sm text-gray-400 transition hover:text-sage">Service Areas</a></li>
+          <li><a href="/#reviews" class="text-sm text-gray-400 transition hover:text-sage">Our Reviews</a></li>
+          <li><a href="/#faq" class="text-sm text-gray-400 transition hover:text-sage">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Our Services -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wide text-white">Our Services</h3>
+        <ul class="mt-5 space-y-3">
+          <li><a href="/#services" class="text-sm text-gray-400 transition hover:text-sage">Regular Cleaning</a></li>
+          <li><a href="/#services" class="text-sm text-gray-400 transition hover:text-sage">Deep Cleaning</a></li>
+          <li><a href="/#services" class="text-sm text-gray-400 transition hover:text-sage">Move In/Out Cleaning</a></li>
+          <li><a href="/#services" class="text-sm text-gray-400 transition hover:text-sage">Airbnb Cleaning</a></li>
+          <li><a href="/#services" class="text-sm text-gray-400 transition hover:text-sage">Post Construction</a></li>
+          <li><a href="/#services" class="text-sm text-gray-400 transition hover:text-sage">Commercial Cleaning</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Reach Out -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wide text-white">Reach Out</h3>
+        <ul class="mt-5 space-y-4">
+          <li class="flex items-start gap-3">
+            <i class="ph-fill ph-phone mt-0.5 shrink-0 text-base text-sage"></i>
+            <a href="tel:6192406951" class="text-sm text-gray-400 transition hover:text-sage">(619) 240-6951</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="ph-fill ph-envelope-simple mt-0.5 shrink-0 text-base text-sage"></i>
+            <a href="mailto:info@explosioncleaningservice.com" class="whitespace-nowrap text-sm text-gray-400 transition hover:text-sage">info@explosioncleaningservice.com</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="ph-fill ph-map-pin mt-0.5 shrink-0 text-base text-sage"></i>
+            <span class="text-sm text-gray-400">Serving San Diego County, CA</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-14 border-t border-white/10 pt-8 sm:mt-16">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <p class="text-center text-xs text-gray-500 sm:text-left">
+          &copy; <span id="currentYear"></span> Explosion Cleaning Service. All Rights Reserved.
+        </p>
+        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
+          Licensed <span class="text-sage">&bull;</span> Trustworthy <span class="text-sage">&bull;</span> Insured
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING WIDGETS ===================== -->
+<button
+  id="scrollTopBtn"
+  type="button"
+  aria-label="Scroll to top"
+  class="scroll-top-btn fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-leaf text-white shadow-[0_6px_16px_-4px_rgba(0,0,0,0.35)] transition duration-200 ease-out hover:bg-leaf-light hover:-translate-y-1 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14"
+>
+  <i class="ph-bold ph-arrow-up text-lg sm:text-xl"></i>
+</button>
+
+<div class="fixed bottom-4 left-4 z-40 sm:bottom-8 sm:left-8">
+  <div id="contactPopup" class="contact-popup">
+    <div>
+      <div class="mb-4 w-60 rounded-2xl border border-forest/10 bg-white p-4 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.35)] sm:w-64">
+        <div class="flex items-center justify-between">
+          <p class="text-sm font-bold text-forest">Need a Quick Quote?</p>
+          <button
+            type="button"
+            id="contactPopupClose"
+            aria-label="Close contact options"
+            class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-gray-400 transition duration-200 ease-out hover:bg-forest/5 hover:text-forest"
+          >
+            <i class="ph-bold ph-x text-sm"></i>
+          </button>
+        </div>
+        <div class="mt-3 flex flex-col gap-2">
+          <a
+            href="tel:6192406951"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-leaf px-4 py-2.5 text-sm font-bold text-white transition duration-200 ease-out hover:bg-forest"
+          >
+            <i class="ph-fill ph-phone text-base"></i>
+            Call Us
+          </a>
+          <a
+            href="sms:6192406951?body=Hi%20Explosion%20Cleaning%20Service,%20I%20would%20like%20a%20quote%20for%20"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-leaf px-4 py-2.5 text-sm font-bold text-white transition duration-200 ease-out hover:bg-forest"
+          >
+            <i class="ph-fill ph-chat-circle-text text-base"></i>
+            Text Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button
+    id="contactToggleBtn"
+    type="button"
+    aria-label="Contact us"
+    aria-expanded="false"
+    aria-controls="contactPopup"
+    class="flex h-12 w-12 items-center justify-center rounded-full bg-leaf text-white shadow-[0_6px_16px_-4px_rgba(0,0,0,0.35)] transition duration-200 ease-out hover:bg-leaf-light hover:-translate-y-1 sm:h-14 sm:w-14"
+  >
+    <i class="ph-fill ph-chat-circle-text text-lg sm:text-xl"></i>
+  </button>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = menuBtn.querySelector('i');
+
+  menuBtn.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(isHidden));
+    menuIcon.className = isHidden ? 'ph-bold ph-x' : 'ph-bold ph-list';
+  });
+
+  const currentYearEl = document.getElementById('currentYear');
+  if (currentYearEl) {
+    currentYearEl.textContent = new Date().getFullYear();
+  }
+
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const toggleScrollTopBtn = () => {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+  };
+  toggleScrollTopBtn();
+  window.addEventListener('scroll', toggleScrollTopBtn, { passive: true });
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  const contactToggleBtn = document.getElementById('contactToggleBtn');
+  const contactPopup = document.getElementById('contactPopup');
+  const contactPopupClose = document.getElementById('contactPopupClose');
+
+  const closeContactPopup = () => {
+    contactPopup.classList.remove('open');
+    contactToggleBtn.setAttribute('aria-expanded', 'false');
+  };
+  const openContactPopup = () => {
+    contactPopup.classList.add('open');
+    contactToggleBtn.setAttribute('aria-expanded', 'true');
+  };
+
+  contactToggleBtn.addEventListener('click', () => {
+    const isOpen = contactPopup.classList.contains('open');
+    isOpen ? closeContactPopup() : openContactPopup();
+  });
+  contactPopupClose.addEventListener('click', closeContactPopup);
+  document.addEventListener('click', (e) => {
+    if (
+      contactPopup.classList.contains('open') &&
+      !contactPopup.contains(e.target) &&
+      !contactToggleBtn.contains(e.target)
+    ) {
+      closeContactPopup();
+    }
+  });
+</script>
+
+</body>
+</html>
