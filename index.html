@@ -1267,7 +1267,36 @@
 
         <!-- Section 1 -->
         <div>
-          <h3 class="font-serif text-xl font-bold text-forest">1. Tell Us About Your Space</h3>
+          <h3 class="font-serif text-xl font-bold text-forest">1. Your Contact Information</h3>
+          <div class="mt-6">
+            <label class="form-label" for="full_name">Full Name <span class="text-leaf">*</span></label>
+            <input type="text" id="full_name" name="Full Name" required autocomplete="name" placeholder="John Doe" class="form-input">
+          </div>
+          <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div>
+              <!-- name="email" is a FormSubmit special field: replying to the lead email goes straight to the customer -->
+              <label class="form-label" for="contact_email">Email Address <span class="text-leaf">*</span></label>
+              <input type="email" id="contact_email" name="email" required autocomplete="email" placeholder="john@example.com" class="form-input">
+            </div>
+            <div>
+              <label class="form-label" for="contact_phone">Phone Number <span class="text-leaf">*</span></label>
+              <input type="tel" id="contact_phone" name="Phone Number" required autocomplete="tel" inputmode="tel" placeholder="(619) 555-0123" class="form-input">
+            </div>
+          </div>
+          <div class="mt-6">
+            <label class="form-label" for="contact_method">Preferred Contact Method</label>
+            <select id="contact_method" name="Preferred Contact Method" class="form-input">
+              <option value="" selected>Select a method</option>
+              <option>Call</option>
+              <option>Text</option>
+              <option>Email</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="border-t border-forest/10 pt-10">
+          <h3 class="font-serif text-xl font-bold text-forest">2. Tell Us About Your Space</h3>
           <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
               <label class="form-label" for="service_requested">Service Requested <span class="text-leaf">*</span></label>
@@ -1298,9 +1327,9 @@
           </div>
         </div>
 
-        <!-- Section 2 -->
+        <!-- Section 3 -->
         <div class="border-t border-forest/10 pt-10">
-          <h3 class="font-serif text-xl font-bold text-forest">2. Property Details</h3>
+          <h3 class="font-serif text-xl font-bold text-forest">3. Property Details</h3>
           <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
             <div>
               <label class="form-label">Bedrooms</label>
@@ -1361,9 +1390,9 @@
           </div>
         </div>
 
-        <!-- Section 3 -->
+        <!-- Section 4 -->
         <div class="border-t border-forest/10 pt-10">
-          <h3 class="font-serif text-xl font-bold text-forest">3. Cleaning Requirements</h3>
+          <h3 class="font-serif text-xl font-bold text-forest">4. Cleaning Requirements</h3>
 
           <div class="mt-6">
             <label class="form-label" for="cleaning_level">Level of Cleaning Required (1-10 Scale, 10 is dirtiest)</label>
@@ -1405,9 +1434,9 @@
           </div>
         </div>
 
-        <!-- Section 4 -->
+        <!-- Section 5 -->
         <div class="border-t border-forest/10 pt-10">
-          <h3 class="font-serif text-xl font-bold text-forest">4. Select Add-on Services <span class="font-normal text-gray-500">(Optional)</span></h3>
+          <h3 class="font-serif text-xl font-bold text-forest">5. Select Add-on Services <span class="font-normal text-gray-500">(Optional)</span></h3>
           <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
             <label class="checkbox-item">
               <input type="checkbox" name="Add-ons" value="Inside Oven (+$40)">
