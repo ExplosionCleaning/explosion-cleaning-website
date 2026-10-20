@@ -57,5 +57,4 @@ Notes:
 ## Before / after launch checklist
 
 - [ ] Activate FormSubmit (see above)
-- [ ] Replace the `#` placeholder footer social links (the storefront icon is a placeholder for Google Business Profile)
 - [ ] The logo (`Media/Explosion Cleaning Service Logo.png`) is about 5 MB. Compress it for faster page loads
